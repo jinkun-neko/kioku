@@ -14,12 +14,12 @@
   <body>
     <div id="container">
       <%= render 'layouts/header' %>
-      <div id="center_layout">
-        <% if flash[:notice] %>
-          <div class="alert alert-success" role="alert">
-            <p class="notice"><%= notice %></p>
-          </div>
-        <% end %>
+        <div id="center_layout">
+          <% if flash[:notice] %>
+            <div class="alert alert-success" role="alert">
+              <p class="notice"><%= notice %></p>
+            </div>
+          <% end %>
 
         <% if flash[:alert] %>
           <div class="alert alert-danger" role="alert">
@@ -28,7 +28,6 @@
         <% end %>
 
         <%= yield %>
-
         <%= render 'layouts/footer' %>
   </body>
 </html>

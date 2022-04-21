@@ -225,15 +225,54 @@ footer ul li {
 
 #error_explanation {
   color: rgb(241, 54, 54);
+  padding: 28px;
+  position: relative;
+  top: -40px;
   text-align: center;
+  list-style: none;
   text-decoration: rgb(255, 193, 193) wavy underline;
+  background-color: rgb(235, 234, 234);
+  border-radius:  10px;
+  h2{
+    color: rgb(241, 54, 54);
+  }
+  ul{
+    list-style: none;
+  }
 }
 
-.alert {
-  color: rgb(241, 54, 54);
+.alert-success{
+  color: rgb(0, 146, 2);
+  text-decoration: rgb(70, 255, 73)  wavy underline;
   text-align: center;
-  text-decoration: rgb(255, 193, 193) wavy underline;
+  position: relative;
+  top: 25px;
+  padding: 0px;
+  padding-bottom: 13px;
+  .notice{
+    color: rgb(0, 146, 2);
+    text-decoration: rgb(70, 255, 73)  wavy underline;
+    position: relative;
+    top: 13px;
+    padding: 5px;
+  }
 }
+
+.alert-danger{
+    color: rgb(241, 54, 54);
+    text-align: center;
+    text-decoration: rgb(255, 193, 193) wavy underline;
+    position: relative;
+    top: 17px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: -20px;
+  .alert{
+    margin-top: 3px;
+    margin-bottom: 2px;
+  }
+}
+
 .form-label{
   font-size: 14px;
   color: #3e4e73;
@@ -291,10 +330,11 @@ footer ul li {
 /*********************************
 	各ページの設定
 *********************************/
-/*********************************
-	kioku_sessions new
-*********************************/ 
+// kioku_sessions new
 
 .kioku_sessions{
+  margin-top: 80px;
+}
+.kioku_new{
   margin-top: 80px;
 }

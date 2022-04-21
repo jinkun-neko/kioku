@@ -44,10 +44,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rails-i18n' #英語を日本語に翻訳するgem
 gem 'devise'  #ログイン機能を実装する。
-gem 'omniauth-google-oauth2'  #google認証
-gem 'omniauth-rails_csrf_protection' #omniauthに脆弱性対策
 gem 'devise-i18n' #deviseを日本語翻訳する。
 gem 'devise-i18n-views'  #deviseのページを日本語翻訳する。
-
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
 gem 'bootstrap-sass', '3.4.1' #bootstrap-sassは、LESSをSassへ変換し、必要なBootstrapファイルを現在のアプリケーションですべて利用できるようにします。
 gem 'bootstrap' , '~> 5.1.3'#cssのフレームワーク

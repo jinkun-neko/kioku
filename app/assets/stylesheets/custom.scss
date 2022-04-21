@@ -1,292 +1,291 @@
+// @import "bootstrap";
+// @import url('https://fonts.googleapis.com/css?family=Kosugi');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
 
-@import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Kosugi');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
+// /*********************************
+// 	初期設定
+// *********************************/
 
-/*********************************
-	初期設定
-*********************************/
-
-.book-show{
-  margin-top: -15px;
-}
-
-// #container{
-//   margin-top: 10px;
+// .book-show{
+//   margin-top: -15px;
 // }
 
-body {
-  margin-bottom: 10px;
-  // padding-top: 10px;
-  padding-bottom: 30px;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll; //y = 縦のスクロール
-  overflow-x: hidden; //x = 横のスクロールはダメですよ。
-  text-align: center;
-}
+// // #container{
+// //   margin-top: 10px;
+// // }
 
-section {
-  overflow: auto;
-}
-textarea {
-  resize: vertical;
-}
-.center {
-  text-align: center;
-}
-.center h1 {
-  margin-bottom: 10px;
-}
+// body {
+//   margin-bottom: 10px;
+//   // padding-top: 10px;
+//   padding-bottom: 30px;
+//   width: 100%;
+//   height: 100%;
+//   overflow-y: scroll; //y = 縦のスクロール
+//   overflow-x: hidden; //x = 横のスクロールはダメですよ。
+//   text-align: center;
+// }
 
-/*********************************
-	文字のスタイル
-*********************************/
+// section {
+//   overflow: auto;
+// }
+// textarea {
+//   resize: vertical;
+// }
+// .center {
+//   text-align: center;
+// }
+// .center h1 {
+//   margin-bottom: 10px;
+// }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-h1 {
-  color: #0B3B0B;
-  font-size: 3em;
-  letter-spacing: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: 'Noto Sans JP', sans-serif;
-}
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  color: rgb(60, 60, 60);
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: 'Noto Sans JP', sans-serif;
-}
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-  font-family: 'Noto Sans JP', sans-serif;
-}
+// /*********************************
+// 	文字のスタイル
+// *********************************/
 
-.white{
-  font-size: 17px;
-  color: #ffffff;
-  font-family: 'Noto Sans JP', sans-serif;
-}
+// h1, h2, h3, h4, h5, h6 {
+//   line-height: 1;
+// }
+// h1 {
+//   color: #0B3B0B;
+//   font-size: 3em;
+//   letter-spacing: 10px;
+//   padding-bottom: 10px;
+//   text-align: center;
+//   text-transform: uppercase;
+//   font-weight: bold;
+//   font-family: 'Noto Sans JP', sans-serif;
+// }
+// h2 {
+//   font-size: 1.2em;
+//   letter-spacing: -1px;
+//   margin-bottom: 30px;
+//   text-align: center;
+//   color: rgb(60, 60, 60);
+//   text-transform: uppercase;
+//   font-weight: bold;
+//   font-family: 'Noto Sans JP', sans-serif;
+// }
+// p {
+//   font-size: 1.1em;
+//   line-height: 1.7em;
+//   font-family: 'Noto Sans JP', sans-serif;
+// }
 
-/*********************************
-	ヘッダーの設定
-*********************************/
+// .white{
+//   font-size: 17px;
+//   color: #ffffff;
+//   font-family: 'Noto Sans JP', sans-serif;
+// }
 
-.logo {
-  float: left;
-  margin-left: 80px;
-  font-size: 2.0em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  padding-top: 10px;
-  font-weight: bold;
-}
-.logo:hover {
-  opacity: 0.5;
-  text-decoration: none;
-}
-a:hover {
-  opacity: 0.5;
-}
-.navbar-nav{
-  margin-right: 60px;
-  font-size: 0.8em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-li{
-  margin-left: 10px;
-}
-//header_toggler
-.navbar-dark .navbar-toggler{
-  outline: none;
-  border: none;
-}
+// /*********************************
+// 	ヘッダーの設定
+// *********************************/
 
-@media screen and (max-width: 1000px) {
-  .logo {
-    float: left;
-    margin-left: 10px;
-    font-size: 1.7em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    padding-top: 10px;
-    font-weight: bold;
-  }
-  .navbar-nav{
-    margin-right: 40px;
-    font-size: 0.9em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-  }
-  li{
-    margin-left: 10px;
-  }
-}
+// .logo {
+//   float: left;
+//   margin-left: 80px;
+//   font-size: 2.0em;
+//   color: #fff;
+//   text-transform: uppercase;
+//   letter-spacing: 10px;
+//   padding-top: 10px;
+//   font-weight: bold;
+// }
+// .logo:hover {
+//   opacity: 0.5;
+//   text-decoration: none;
+// }
+// a:hover {
+//   opacity: 0.5;
+// }
+// .navbar-nav{
+//   margin-right: 60px;
+//   font-size: 0.8em;
+//   color: #fff;
+//   text-transform: uppercase;
+//   letter-spacing: 2px;
+//   font-weight: bold;
+// }
+// li{
+//   margin-left: 10px;
+// }
+// //header_toggler
+// .navbar-dark .navbar-toggler{
+//   outline: none;
+//   border: none;
+// }
 
-@media screen and (max-width: 700px) {
-  .logo {
-    margin-left: 175px;
-    font-size: 2.0em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    padding-top: 10px;
-    font-weight: bold;
-  }
-  .navbar-collapse .navbar-nav  {
-    height: 100vh;
-    margin-left: 170px;
-    margin-top: 175px;
-    li{
-      font-size: 20px;
-      margin-top: 10px;
-    }
-    li:hover{
-      font-size: 20px;
-      margin-top: 10px;
-      color: yellow;
-    }
-  }
-  .navbar-collapse .navbar-nav .login2 {
-    height: 100vh;
-    margin-left: 180px;
-    margin-top: 200px;
-    li{
-      font-size: 20px;
-      margin-top: 10px;
-    }
-    li:hover{
-      font-size: 20px;
-      margin-top: 10px;
-      color: yellow;
-    }
-  }
-}
+// @media screen and (max-width: 1000px) {
+//   .logo {
+//     float: left;
+//     margin-left: 10px;
+//     font-size: 1.7em;
+//     color: #fff;
+//     text-transform: uppercase;
+//     letter-spacing: 10px;
+//     padding-top: 10px;
+//     font-weight: bold;
+//   }
+//   .navbar-nav{
+//     margin-right: 40px;
+//     font-size: 0.9em;
+//     color: #fff;
+//     text-transform: uppercase;
+//     letter-spacing: 2px;
+//     font-weight: bold;
+//   }
+//   li{
+//     margin-left: 10px;
+//   }
+// }
 
-/*********************************
-	フッターの設定
-*********************************/
+// @media screen and (max-width: 700px) {
+//   .logo {
+//     margin-left: 175px;
+//     font-size: 2.0em;
+//     color: #fff;
+//     text-transform: uppercase;
+//     letter-spacing: 10px;
+//     padding-top: 10px;
+//     font-weight: bold;
+//   }
+//   .navbar-collapse .navbar-nav  {
+//     height: 100vh;
+//     margin-left: 170px;
+//     margin-top: 175px;
+//     li{
+//       font-size: 20px;
+//       margin-top: 10px;
+//     }
+//     li:hover{
+//       font-size: 20px;
+//       margin-top: 10px;
+//       color: yellow;
+//     }
+//   }
+//   .navbar-collapse .navbar-nav .login2 {
+//     height: 100vh;
+//     margin-left: 180px;
+//     margin-top: 200px;
+//     li{
+//       font-size: 20px;
+//       margin-top: 10px;
+//     }
+//     li:hover{
+//       font-size: 20px;
+//       margin-top: 10px;
+//       color: yellow;
+//     }
+//   }
+// }
 
-#footerWrap{
-  width:100%;
-  position: absolute;/*←相対位置*/
-  padding-bottom: 30px;/*←footerの高さ*/
-  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
-}
-footer {
-    width: 100%; /* フッター幅を指定*/
-    height: 30px; 
-    margin: 0 auto;
-    background-color: #0B3B0B;
-    color: #fff;
-    text-align: center;
-    padding: 3px 0;
-    position: fixed;/*←絶対位置*/
-    right: 0px;
-    bottom: 0; /*下に固定*/
-}
-footer a {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-decoration: none;
-}
-footer a:hover {
-  color: #fff;
-  opacity: 0.5;
-}
-footer ul {
-  float: right;
-  margin-right: 20px;
-  list-style: none;
-}
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
+// /*********************************
+// 	フッターの設定
+// *********************************/
 
-/*********************************
-	formの設定
-*********************************/
+// #footerWrap{
+//   width:100%;
+//   position: absolute;/*←相対位置*/
+//   padding-bottom: 30px;/*←footerの高さ*/
+//   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+// }
+// footer {
+//     width: 100%; /* フッター幅を指定*/
+//     height: 30px; 
+//     margin: 0 auto;
+//     background-color: #0B3B0B;
+//     color: #fff;
+//     text-align: center;
+//     padding: 3px 0;
+//     position: fixed;/*←絶対位置*/
+//     right: 0px;
+//     bottom: 0; /*下に固定*/
+// }
+// footer a {
+//   color: #fff;
+//   text-transform: uppercase;
+//   font-size: 0.9em;
+//   letter-spacing: 2px;
+//   font-weight: bold;
+//   text-decoration: none;
+// }
+// footer a:hover {
+//   color: #fff;
+//   opacity: 0.5;
+// }
+// footer ul {
+//   float: right;
+//   margin-right: 20px;
+//   list-style: none;
+// }
+// footer ul li {
+//   float: left;
+//   margin-left: 15px;
+// }
 
-//alert
-.alert {
-  color: rgb(241, 54, 54);
-  text-align: center;
-  margin-top: 20px;
-  text-decoration: rgb(255, 193, 193) wavy underline;
-}
-.form-label{
-  font-size: 14px;
-  color: #0B3B0B;
-  font-family: 'Noto Sans JP', sans-serif;
-}
-.form-label-red{
-  font-size: 12px;
-  color: rgb(241, 54, 54);
-  font-family: 'Noto Sans JP', sans-serif;
-}
-.form-label-green{
-  font-size: 12px;
-  color: #429442;
-  font-family: 'Noto Sans JP', sans-serif;
-}
-.form-label-brown{
-  font-size: 15px;
-  color: #88725b;
-  font-family: 'Noto Sans JP', sans-serif;
-}
+// /*********************************
+// 	formの設定
+// *********************************/
+
+// //alert
+// .alert {
+//   color: rgb(241, 54, 54);
+//   text-align: center;
+//   margin-top: 20px;
+//   text-decoration: rgb(255, 193, 193) wavy underline;
+// }
+// .form-label{
+//   font-size: 14px;
+//   color: #0B3B0B;
+//   font-family: 'Noto Sans JP', sans-serif;
+// }
+// .form-label-red{
+//   font-size: 12px;
+//   color: rgb(241, 54, 54);
+//   font-family: 'Noto Sans JP', sans-serif;
+// }
+// .form-label-green{
+//   font-size: 12px;
+//   color: #429442;
+//   font-family: 'Noto Sans JP', sans-serif;
+// }
+// .form-label-brown{
+//   font-size: 15px;
+//   color: #88725b;
+//   font-family: 'Noto Sans JP', sans-serif;
+// }
 
 
-@media screen and (max-width: 1000px) {
-  .margin-left{
-    margin-left: 80px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .margin-left{
-    margin-left: 60px;
-  }
-  .alert {
-    z-index: 数字;
-    color: rgb(241, 54, 54);
-    text-align: center;
-    margin-top: 20px;
-    text-decoration: rgb(255, 193, 193) wavy underline;
-    font-size: 14px;
-  }
-}
-.link{
-  font-size: 13px;
-  -webkit-text-stroke: 1px rgb(149, 163, 255);
-  text-decoration: none;
-  font-family: 'Noto Sans JP', sans-serif;
-  color: #76e7fe;
-}
-.link:hover{
-  font-size: 13px;
-  text-decoration: underline;
-  color: rgb(72, 173, 82);
-  -webkit-text-stroke: 1px #33643c;
-  opacity: 0.5;
-  font-family: 'Noto Sans JP', sans-serif;
-}
+// @media screen and (max-width: 1000px) {
+//   .margin-left{
+//     margin-left: 80px;
+//   }
+// }
+// @media screen and (max-width: 700px) {
+//   .margin-left{
+//     margin-left: 60px;
+//   }
+//   .alert {
+//     z-index: 数字;
+//     color: rgb(241, 54, 54);
+//     text-align: center;
+//     margin-top: 20px;
+//     text-decoration: rgb(255, 193, 193) wavy underline;
+//     font-size: 14px;
+//   }
+// }
+// .link{
+//   font-size: 13px;
+//   -webkit-text-stroke: 1px rgb(149, 163, 255);
+//   text-decoration: none;
+//   font-family: 'Noto Sans JP', sans-serif;
+//   color: #76e7fe;
+// }
+// .link:hover{
+//   font-size: 13px;
+//   text-decoration: underline;
+//   color: rgb(72, 173, 82);
+//   -webkit-text-stroke: 1px #33643c;
+//   opacity: 0.5;
+//   font-family: 'Noto Sans JP', sans-serif;
+// }

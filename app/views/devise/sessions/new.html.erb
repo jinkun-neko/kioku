@@ -1,46 +1,43 @@
 <% provide(:title, "ログイン") %>  
-  <div class="container">
-    <div class="row">
-    
-      <div class="mb-4">
-        <h1>ログイン</h1>
-      </div>
-
     <div class="container">
       <div class="row">
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="kioku_sessions">
+              <div class="mb-4">
+                <h1>ログイン</h1>
+              </div>
 
-        <div class="col-md-6 offset-md-3">
-          <div class="mb-4">
-            <%= f.label :email, class:'form-label' %><br/>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
-          </div>
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class="col-md-6 offset-md-3">
+                  <div class="mb-4">
+                    <%= f.label :email, class:'form-label' %><br/>
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+                  </div>
 
-          <div class="mb-4">
-            <%= f.label :password, class:'form-label' %><br/>
-            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
-          </div>
+                  <div class="mb-4">
+                    <%= f.label :password, class:'form-label' %><br/>
+                    <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
+                  </div>
 
-          <% if devise_mapping.rememberable? %>
-            <div class="mb-4">
-              <label>
-                <%= f.check_box :remember_me %>
-                <span>次回から自動でログイン</span>
-              </label>
+                  <% if devise_mapping.rememberable? %>
+                    <div class="mb-4">
+                      <label>
+                        <%= f.check_box :remember_me %>
+                        <span>次回から自動でログイン</span>
+                      </label>
+                    </div>
+
+                <% end %>
+                  <div class="mb-4">
+                    <%= f.submit "ログイン", class: "btn btn-outline-primary w-100" %>
+                  </div>
+
+                <% end %>
+
+                    <%= render "devise/shared/links" %>
+                </div>
+              </div>
             </div>
-
-        <% end %>
-          <div class="mb-4">
-            <%= f.submit "ログイン", class: "btn btn-outline-success w-100" %>
-          </div>
-
-        <% end %>
-
-            <%= render "devise/shared/links" %>
-
           </div>
         </div>
       </div>
-    </div>
-  </div>
-<div>
+    <div>

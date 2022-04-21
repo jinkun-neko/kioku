@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.0'
+ruby '2.7.2'
 
-gem 'rails', '~> 6.1.5'
+gem 'rails', '~> 6.0.3'
 gem 'mysql2', '~> 0.5'
 gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
@@ -50,5 +50,4 @@ gem 'devise-i18n' #deviseを日本語翻訳する。
 gem 'devise-i18n-views'  #deviseのページを日本語翻訳する。
 
 gem 'bootstrap-sass', '3.4.1' #bootstrap-sassは、LESSをSassへ変換し、必要なBootstrapファイルを現在のアプリケーションですべて利用できるようにします。
-gem 'bootstrap', '~> 5.1.3' #cssのフレームワーク
-gem 'jquery-rails'
+gem 'bootstrap' , '~> 5.1.3'#cssのフレームワーク

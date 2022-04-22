@@ -1,5 +1,32 @@
 <div class="kioku_sessions">
-  <% @users.each do |user| %>
-    <%= user.username %>
-  <%end %>
+  <div class="container">
+    <div class="row justify-content-start">
+
+      <% @users.each do |user| %>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+          <div class="mb-3">
+            <div class="card shadow-sm" style="width: 251px; border-radius: 12px;">
+              <%= attachment_image_tag user, :profile_image, fallback: "no-image.png" , style: "width: 250px;height: 250px;object-fit: cover; border-radius: 10px 10px 0 0;"  %>
+                <div class="card-body">
+                  <h5 class="card-title text-center"> <%= user.username %></h5>
+                  <h6 class="card-title text-center">投稿数: <%= user.username %></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+          <div class="mb-2">
+            <div class="card shadow-sm" style="width: 251px; border-radius: 12px;">
+              <%= attachment_image_tag user, :profile_image, fallback: "no-image.png" , style: "width: 250px;height: 250px;object-fit: cover; border-radius: 10px 10px 0 0;"  %>
+                <div class="card-body">
+                  <h5 class="card-title text-center"> <%= user.username %></h5>
+                  <h6 class="card-title text-center">投稿数: <%= user.username %></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        <%end %>
+
+    </div>
+  </div>
 </div>

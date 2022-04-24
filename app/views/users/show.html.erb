@@ -1,5 +1,138 @@
 <div class="kioku_sessions">
-  <% @users.each do |user| %>
-    <%= user.username %>
-  <%end %>
-</div>
+  <div class="profile">
+    <div class="container">
+      <div class="row  align-items-center">
+        <div class="col-2 offset-1 offset-md-2 offset-lg-2">
+          <div class="mt-3">
+            <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover; border-radius: 120px;" %>
+          </div>     
+        </div>     
+          <div class="col-2 offset-3 offset-md-2 offset-lg-1">
+            <div class="mt-3">
+                <h6>10</h6>
+                <h6>投稿数</h6>
+            </div>
+          </div>
+            <div class="col-2">
+              <div class="mt-3">
+                <h6>10</h6>
+                <h6>フォロワー</h6>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="mt-3">
+                <h6>10</h6>
+                <h6>フォロー中</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row">
+          <div class="col-12 offset-1 offset-md-1 offset-lg-2">
+            <div class="mt-5">
+              <h5><%= @user.username %></h5>
+            </div>
+          </div>
+          <div class="col-12 offset-1 offset-md-1 offset-lg-2">
+            <div class="mt-4">
+              <% if  @user.profile.present? %>
+                <h5><%= @user.profile  %></h5>
+              <% else %>
+                <h6 class="p-3  mb-5 bg-info text-white w-50">プロフィールの設定はまだです。</h6>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="container-fluid">
+      <div class="row d-flex align-items-center">
+        <% if  @user.profile_image.present? %>
+          <div class="col-4 offset-1 offset-md-1 offset-lg-2">
+            <div class="mt-4">
+                <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover; border-radius: 120px;" %>
+                </div>
+            </div>
+        <% else %>
+          <%
+=begin%>
+ <div class="col-12 offset-1 offset-md-1 offset-lg-2">
+            <div class="mt-5">
+                <h6>投稿はまだです。</h6>
+              </div>
+            </div> 
+<%
+=end%>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2 offset-lg-2">
+              <div class="mt-1">
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover;" %>
+              </div>
+            </div>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+

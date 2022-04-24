@@ -6,11 +6,6 @@
 /*********************************
 	初期設定
 *********************************/
-
-.book-show{
-  margin-top: -15px;
-}
-
 body {
   margin-top: 56px;
   margin-bottom: 10px;
@@ -310,6 +305,9 @@ footer ul li {
     text-decoration: rgb(255, 193, 193) wavy underline;
     font-size: 14px;
   }
+  .user-card{
+    margin-left: 110px;
+  }
 }
 .link{
   font-size: 13px;
@@ -330,8 +328,11 @@ footer ul li {
 /*********************************
 	各ページの設定
 *********************************/
-// kioku_sessions new
-
+// kioku
+.kioku_index{
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
 .kioku_sessions{
   margin-top: 80px;
 }

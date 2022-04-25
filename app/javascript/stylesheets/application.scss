@@ -290,25 +290,6 @@ footer ul li {
 }
 
 
-@media screen and (max-width: 1000px) {
-  .margin-left{
-    margin-left: 80px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .margin-left{
-    margin-left: 60px;
-  }
-  .alert {
-    color: rgb(241, 54, 54);
-    text-align: center;
-    text-decoration: rgb(255, 193, 193) wavy underline;
-    font-size: 14px;
-  }
-  .user-card{
-    margin-left: 110px;
-  }
-}
 .link{
   font-size: 13px;
   -webkit-text-stroke: 1px rgb(149, 163, 255);
@@ -326,9 +307,46 @@ footer ul li {
 }
 
 /*********************************
-	各ページの設定
+各ページの設定
 *********************************/
 // kioku
+
+.kioku_show{
+  margin-top: 100px;
+  margin-bottom: 35px;
+}
+//user_show image
+@media screen and (max-width: 700px) {
+  .image_variable{
+    width:145px; 
+    height:145px;
+    border-radius: 2px;
+  }
+  .image_set{
+    margin-left: -9px;
+    margin-bottom: -5px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .image_variable{
+    width:164px; 
+    height:164px;
+    border-radius: 2px;
+  }
+  .image_set{
+    margin-left: -6px;
+  }
+}
+.image_variable{
+  width:190px; 
+  height:190px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+.kioku_edit{
+  margin-top: 140px;
+  margin-bottom: 20px;
+}
 .kioku_index{
   margin-top: 100px;
   margin-bottom: 20px;
@@ -338,4 +356,36 @@ footer ul li {
 }
 .kioku_new{
   margin-top: 80px;
+}
+
+/*********************************
+メディアクエリ
+*********************************/
+
+@media screen and (max-width: 1000px) {
+  .margin-left{
+    margin-left: 80px;
+  }
+  .image_variable{
+    width:180px; 
+    height:180px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .image_variable{
+    width:160px; 
+    height:160px;
+  }
+  .margin-left{
+    margin-left: 60px;
+  }
+  .alert {
+    color: rgb(241, 54, 54);
+    text-align: center;
+    text-decoration: rgb(255, 193, 193) wavy underline;
+    font-size: 14px;
+  }
+  .user-card{
+    margin-left: 110px;
+  }
 }

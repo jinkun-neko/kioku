@@ -1,0 +1,31 @@
+<div class="kioku_edit">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1>投稿画面</h1>
+            
+              <%= form_with(model: @post, local: true) do |f| %> 
+                <%= render 'shared/error_messages_posts' %> 
+
+              <div class="col-md-6 offset-md-3">
+                <div class="mb-4 mt-3">
+                  <div class="field">
+                    <%= f.label :画像 , class: 'form-label' %>
+                    <%= f.attachment_field :image , class: 'form-control mw-50' %>
+                  </div>
+                </div>
+
+                <div class="mb-5 mt-3">
+                  <div class="field">
+                      <%= f.label :コメント  , class: 'form-label' %>
+                      <%= f.text_area :body , class: 'form-control mw-50' , style: "height:125px" %>
+                    </div>
+                  </div>
+
+              <%= f.submit "作成", class: "btn btn-outline-primary w-100" %>
+            </div>
+          </div>
+
+      <% end %> 
+    </div>
+  <div>
+</div>

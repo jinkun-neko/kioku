@@ -1,0 +1,19 @@
+<div class="kioku_post_show">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-5">
+        <div class="pots-card">
+          <div class="mb-5">
+                <div class="card shadow-sm" style="width: 300px; height: 300px; boder-radius: 20px;">
+                  <%= attachment_image_tag @post, :image, style: "width:300px; height:300px; object-fit:cover;" %>
+                  <h5 class="card-title text-center"></h5>
+                <div class="card-body">
+                  <h6 class="card-title text-center"><%= simple_format @post.body %> </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

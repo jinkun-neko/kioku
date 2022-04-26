@@ -1,0 +1,15 @@
+<% if @post.errors.any? %>
+
+  <div id="error_explanation">
+    <div class="error_h2">
+      <%= pluralize(@post.errors.count, "つのエラーが発生して、保存されませんでした。") %>
+    </div>
+
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+  </div>
+
+<% end %>   

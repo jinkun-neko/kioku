@@ -39,14 +39,14 @@
     <div class="container">
       <div class="row">
           <div class="col-12 offset-2 offset-xl-1">
-            <div class="mt-3">
+            <div class="mt-0">
               <h5><%= @user.username %></h5>
             </div>
           </div>
           <div class="col-12 offset-2 offset-md-2 offset-lg-2 offset-xl-1">
             <div class="mt-1">
               <% if  @user.profile.present? %>
-                <h6 class="p-3 mb-3 mt-1 w-75 border border-2 border-secondary rounded"><%= @user.profile  %></h6>
+                <h6 class="p-4 mb-5 mt-1 w-75 border border-1 border-secondary rounded mx-75"><%= simple_format @user.profile  %></h6>
               <% else %>
                 <%= link_to edit_user_path(@user) , style:"text-decoration: none;" do %>
                   <h6 class="p-4 mb-5 mt-1 list-group-item-primary link-secondary w-75 shadow rounded text-center">プロフィールの設定はまだです。</h6>

@@ -4,12 +4,16 @@
       <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-5">
         <div class="pots-card">
           <div class="mb-5">
-                <div class="card shadow-sm" style="width: 300px; height: 300px; boder-radius: 20px;">
-                  <%= attachment_image_tag @post, :image, style: "width:300px; height:300px; object-fit:cover;" %>
-                  <h5 class="card-title text-center"></h5>
-                <div class="card-body">
-                  <h6 class="card-title text-center"><%= simple_format @post.body %> </h6>
+            <div class="card shadow-sm" style="width: 300px; height: 300px;  border-radius: 20px;">
+              <%= attachment_image_tag @post, :image, style: "width:300px; height:300px; object-fit:cover;" %>
+              <div class="card-body">
+                <h6 class="card-title text-center"><%= simple_format @post.body %> </h6>
                 </div>
+                <h5 class="card-title text-center">
+                  <% if @post.user.id == current_user.id %>
+                    <%= link_to "編集画面へ", edit_post_path(@post), class: "btn btn-outline-success w-50" %>
+                  <% end %>
+                </h5>
               </div>
             </div>
           </div>

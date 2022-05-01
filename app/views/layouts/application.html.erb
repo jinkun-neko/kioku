@@ -13,22 +13,26 @@
 
   <body>
     <div id="container">
-      <%= render 'layouts/header' %>
-        <div id="center_layout">
+      <div id="center_layout">
+        <%= render 'layouts/header' %>
+
           <% if flash[:notice] %>
             <div class="alert alert-success" role="alert">
               <p class="notice"><%= notice %></p>
             </div>
           <% end %>
 
-        <% if flash[:alert] %>
-          <div class="alert alert-danger" role="alert">
-            <p class="alert"><%= alert %></p>
-          </div>
-        <% end %>
+          <% if flash[:alert] %>
+            <div class="alert alert-danger" role="alert">
+              <p class="alert"><%= alert %></p>
+            </div>
+          <% end %>
 
-        <%= yield %>
+          <%= yield %>
         <%= render 'layouts/footer' %>
+
+      </div><!-- conteiner !-->
+    </div><!-- center_layout !-->
   </body>
 </html>
 

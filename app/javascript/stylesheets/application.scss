@@ -356,9 +356,26 @@ footer ul li {
 .kioku_new{
   margin-top: 80px;
 }
-
+.kioku-posts-index{
+  margin-bottom: 10px;
+  h6{
+    margin-right: 5px;
+  }
+}
+.fa-ellipsis-h {
+  margin-left: 400px;
+  position: absolute;
+  top: -42px;
+}
+.dropdown-menu.show {
+  margin-top: -25px;
+  margin-right: 9px;
+}
 a{
   text-decoration: none;
+}
+.card-profile{
+  margin-top: -35px;
 }
 
 /*********************************

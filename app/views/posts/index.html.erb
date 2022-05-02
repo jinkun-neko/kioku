@@ -4,9 +4,9 @@
 
       <% @posts.each do |post| %>
           <div class="col-12 offset-md-2 offset-xl-3">
-            <div class="card mt-4" style="width: 480px;">
+            <div class="card mt-4" style="width: 450px;">
               <div class="card-body">
-                <%= attachment_image_tag post, :image ,style:"width: 480px; height: 480px;object-fit:cover; margin-left: -17px;margin-top: -17px;border-radius: 3px 3px 0 0;" %>
+                <%= attachment_image_tag post, :image ,style:"width: 450px; height: 450px;object-fit:cover; margin-left: -17px;margin-top: -17px;border-radius: 3px 3px 0 0;" , class: "main_image" %>
               </div>
 
               <div class="card-body">

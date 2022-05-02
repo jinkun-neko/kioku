@@ -1,11 +1,17 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  def new
-    @post = Post.new
-  end
-
+  
   def index
     @posts = Post.all.order(id: "DESC")
+  end
+  
+  
+  def show
+    @post = Post.find(params[:id])
+  end
+  
+  def new
+    @post = Post.new
   end
 
   def create
@@ -14,11 +20,7 @@ class PostsController < ApplicationController
     @post.save
     redirect_to post_path(@post)
   end
-
-  def show
-    @post = Post.find(params[:id])
-  end
-
+  
   def edit
     @post = Post.find(params[:id])
     if @post.user != current_user

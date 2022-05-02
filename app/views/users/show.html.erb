@@ -12,7 +12,7 @@
 
           <div class="col-2 offset-3 offset-md-2 offset-lg-1">
             <div class="mt-3 posts">
-                <h6 class="nunber">10</h6>
+                <h6 class="nunber"><%= @user.posts.count %></h6>
                 <h6>投稿数</h6>
             </div>
           </div>
@@ -66,7 +66,7 @@
                     <div class="mt-1">
                       <div class="image_set">
                       <%= link_to post_path(post) do %>
-                        <%= attachment_image_tag @post, :image, class:"image_variable", fallback: "no-image.png" , style: "object-fit: cover;" %>
+                        <%= attachment_image_tag post, :image, class:"image_variable", fallback: "no-image.png" , style: "object-fit: cover;"  %>
                       <% end %>  
                   </div><!-- image_set !-->
                 </div><!-- mt-1 !-->

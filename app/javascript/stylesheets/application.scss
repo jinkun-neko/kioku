@@ -4,7 +4,7 @@
 
 
 /*********************************
-	初期設定
+  初期設定
 *********************************/
 body {
   margin-top: 45px;
@@ -354,13 +354,17 @@ footer ul li {
       width: 100px!important;
     }
     .image_variable{
-      width:145px!important; 
-      height:145px!important;
+      width: 150px !important;
+      height: 150px !important;
       border-radius: 2px;
+      margin-left: 1px;
     }
     .image_set{
       margin-left: -9px;
       margin-bottom: -5px;
+    }
+    .number{
+      padding-left: 15px;
     }
     .posts{
       margin-left: -60px;
@@ -394,9 +398,26 @@ footer ul li {
 .kioku_index{
   margin-top: 100px;
   margin-bottom: 20px;
+  .main_image{
+    width: 450px!important;
+    height: 450px!important;
+  }
+  .card{
+    width: 450px!important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main_image{
+    width: 450px!important;
+    height: 450px!important;
+  }
+  .card{
+    width: 450px!important;
+    margin-left: 12px;
+  }
 }
 .kioku_sessions{
-  margin-top: 80px;
+  margin-top: 150px;
 }
 .kioku_new{
   margin-top: 80px;
@@ -423,13 +444,16 @@ a{
   margin-top: -35px;
 }
 .kioku_post_show{
-  margin-top: 50px;
-  margin-bottom: 5px;
+  margin-top: 62px;
+  margin-bottom: -5px;
+}
+//user_design
+.user_edit{
+  margin-top: 60px;
 }
 /*********************************
 メディアクエリ
 *********************************/
-
 @media screen and (max-width: 1000px) {
   .margin-left{
     margin-left: 80px;

@@ -1,89 +1,91 @@
 <div class="kioku_show">
     <div class="container">
       <div class="row  align-items-center">
-        <div class="col-2 offset-1 offset-md-1 offset-lg-1">
-          <div class="mt-3">
+
+        <div class="col-2 offset-1 offset-md-1 offset-lg-3">
+          <div class="mt-2">
               <%= link_to edit_user_path(@user) do %>
-                <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover; border-radius: 120px;" %>
-              <% end %>
+              <%= attachment_image_tag @user, :profile_image, style: "profile_image_icon", fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover; border-radius: 120px;" %>
+            <% end %>
           </div>     
         </div>     
+
           <div class="col-2 offset-3 offset-md-2 offset-lg-1">
-            <div class="mt-3">
-                <h6>10</h6>
+            <div class="mt-3 posts">
+                <h6 class="nunber">10</h6>
                 <h6>投稿数</h6>
             </div>
           </div>
             <div class="col-2">
-              <div class="mt-3">
-                <h6>10</h6>
+              <div class="mt-3 follower">
+                <h6 class="nunber">10</h6>
                 <h6>フォロワー</h6>
               </div>
             </div>
             <div class="col-2">
-              <div class="mt-3">
-                <h6>10</h6>
+              <div class="mt-3 follow">
+                <h6 class="nunber">10</h6> 
                 <h6>フォロー中</h6>
             </div>
           </div>
         </div>
-      </div>
-          <div class="col-12 offset-6 offset-md-5 offset-lg-4 offset-xl-4">
+          <div class="col-12 offset-6 offset-md-5 offset-lg-5 offset-xl-5">
             <div class="mt-n5">
               <%= link_to "編集" , edit_user_path(@user), class: "btn btn-outline-success w-50" , style:"margin-top: -55px; margin-left: -15px;" %>
             </div>
           </div>
         </div>
-      </div>
 
-    <div class="container">
-      <div class="row">
-          <div class="col-12 offset-2 offset-xl-1">
-            <div class="mt-0">
-              <h5><%= @user.username %></h5>
-            </div>
-          </div>
-          <div class="col-12 offset-2 offset-md-2 offset-lg-2 offset-xl-1">
-            <div class="mt-1">
-              <% if  @user.profile.present? %>
-                <h6 class="p-4 mb-5 mt-1 w-75 border border-1 border-secondary rounded mx-75"><%= simple_format @user.profile  %></h6>
-              <% else %>
-                <%= link_to edit_user_path(@user) , style:"text-decoration: none;" do %>
-                  <h6 class="p-4 mb-5 mt-1 list-group-item-primary link-secondary w-75 shadow rounded text-center">プロフィールの設定はまだです。</h6>
-                <% end %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
-
-  <% if @user.id == current_user.id %>
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <% if  @user.profile_image.present? %>
-            <div class="col-4 col-md-3 col-lg-3 col-xl-1">
-              <div class="mt-1">
-                <div class="image_set">
-                  <%= attachment_image_tag @user, :profile_image, class:"image_variable", fallback: "no-image.png" , style: "object-fit: cover;" %>
+        <div class="container">
+          <div class="row">
+              <div class="col-12 offset-2 offset-md-2 offset-lg-3 offset-xl-3">
+                <div class="mt-3">
+                  <h5><%= @user.username %></h5>
+                </div>
+              </div>
+              <div class="col-12 offset-2 offset-md-2 offset-lg-3 offset-xl-3">
+                <div class="mt-1">
+                  <% if  @user.profile.present? %>
+                    <h6 class="pb-2 pl-4 pr-4 w-75 rounded" style="max-width:600px;"><%= simple_format @user.profile  %></h6>
+                  <% else %>
+                    <%= link_to edit_user_path(@user) , style:"text-decoration: none;" do %>
+                      <h6 class="p-4 mt-1 list-group-item-primary link-secondary w-75 shadow rounded text-center">プロフィールの設定はまだです。</h6>
+                    <% end %>
+                  <% end %>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      <% else %>
-      <div class="col-12">
-        <div class="mt-3">
-          <h6 class="offset-2 offset-lg-2 offset-xl-1 p-5 mt-3 list-group-item-info w-75 shadow rounded text-center">投稿はまだです。</h6>
-          </div>
-        </div> 
-      <% end %>
-    <% else %>
-        <h6 class="offset-2 offset-lg-2 offset-xl-1 p-5 mt-3 bg-danger bg-gradient text-white   w-75 shadow rounded text-center">他人の投稿は見れません。</h6>
-  <% end %>
 
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+      <div class="container">
+        <div class="row d-flex align-items-center">
+            <% @user.posts.each do |post| %>
+              <div class="col-4 col-md-3 col-lg-3 col-xl-2">
+                <% if @user.id == current_user.id %> 
+                  <% if  @user.profile_image.present? %>
+                    <div class="mt-1">
+                      <div class="image_set">
+                      <%= link_to post_path(post) do %>
+                        <%= attachment_image_tag @post, :image, class:"image_variable", fallback: "no-image.png" , style: "object-fit: cover;" %>
+                      <% end %>  
+                  </div><!-- image_set !-->
+                </div><!-- mt-1 !-->
+              </div><!-- col-4 col-md-3 col-lg-3 col-xl-1!-->
 
+                <% else %>
+                  <div class="col-12">
+                    <div class="mt-3">
+                      <h6 class="offset-2 offset-lg-2 offset-xl-1 p-5 mt-3 list-group-item-info w-75 shadow rounded text-center">投稿はまだです。</h6>
+                    </div>
+                  </div> 
+                <% end %>
+                <% else %>
+                    <h6 class="offset-2 offset-lg-2 offset-xl-1 p-5 mt-3 bg-danger bg-gradient text-white   w-75 shadow rounded text-center">他人の投稿は見れません。</h6>              <% end %>
+                <% end %><!-- user.posts.each !-->
+
+              </div><!-- kioku_show !-->
+            </div><!-- container !-->
+          </div><!-- row  align-items-center !-->
+        </div><!-- container !-->
+      </div><!-- row d-flex align-items-center !-->
+  </div><!-- center_layout !-->

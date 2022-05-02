@@ -7,7 +7,7 @@
 	初期設定
 *********************************/
 body {
-  margin-top: 56px;
+  margin-top: 45px;
   margin-bottom: 10px;
   padding-bottom: 30px;
   width: 100%;
@@ -15,7 +15,6 @@ body {
   overflow-y: scroll; //y = 縦のスクロール
   overflow-x: hidden; //x = 横のスクロールはダメですよ。
 }
-
 section {
   overflow: auto;
 }
@@ -32,7 +31,6 @@ textarea {
 /*********************************
 	文字のスタイル
 *********************************/
-
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -61,17 +59,14 @@ p {
   line-height: 1.7em;
   font-family: 'Noto Sans JP', sans-serif;
 }
-
 .white{
   font-size: 17px;
   color: #ffffff;
   font-family: 'Noto Sans JP', sans-serif;
 }
-
 /*********************************
 	ヘッダーの設定
 *********************************/
-
 .logo {
   float: left;
   margin-left: 80px;
@@ -129,7 +124,6 @@ li{
     margin-left: 10px;
   }
 }
-
 @media screen and (max-width: 700px) {
   .logo {
     margin-left: 190px;
@@ -169,11 +163,9 @@ li{
     }
   }
 }
-
 /*********************************
 	フッターの設定
 *********************************/
-
 #footerWrap{
   width:100%;
   position: absolute;/*←相対位置*/
@@ -181,16 +173,16 @@ li{
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
 }
 footer {
-    width: 100%; /* フッター幅を指定*/
-    height: 30px; 
-    margin: 0 auto;
-    background-color: #1f3466;
-    color: #fff;
-    text-align: center;
-    padding: 3px 0;
-    position: fixed;/*←絶対位置*/
-    right: 0px;
-    bottom: 0; /*下に固定*/
+  width: 100%; /* フッター幅を指定*/
+  height: 30px; 
+  margin: 0 auto;
+  background-color: #1f3466;
+  color: #fff;
+  text-align: center;
+  padding: 3px 0;
+  position: fixed;
+  right: 0px;
+  bottom: 0; 
 }
 footer a {
   color: #fff;
@@ -213,11 +205,9 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
-
 /*********************************
 	formの設定
 *********************************/
-
 #error_explanation {
   color: rgb(241, 54, 54);
   padding: 28px;
@@ -308,32 +298,87 @@ footer ul li {
 /*********************************
 各ページの設定
 *********************************/
-// kioku
-
+// kioku user_show 
 .kioku_show{
   margin-top: 100px;
   margin-bottom: 35px;
+  p {
+    line-height: 1.5em;
+    font-family: none;
+  }
 }
 //user_show image
 @media screen and (max-width: 700px) {
-  .image_variable{
-    width:145px; 
-    height:145px;
-    border-radius: 2px;
-  }
-  .image_set{
-    margin-left: -9px;
-    margin-bottom: -5px;
+  .kioku_show{
+    margin-top: 80px;
+    margin-bottom: 35px;
+    .btn{
+      margin-top: 0px!important;
+      margin-left: -43px!important;
+    }
+    .profile_image{
+      height: 100px!important;
+      width: 100px!important;
+    }
+    .image_variable{
+      width:145px!important; 
+      height:145px!important;
+      border-radius: 2px;
+    }
+    .image_set{
+      margin-left: -9px;
+      margin-bottom: -5px;
+    }
+    .posts{
+      margin-left: -60px;
+    }
+    .follower{
+      margin-left: -62px;
+    }
+    .follow{
+      margin-left: -40px;
+    }
   }
 }
 @media screen and (max-width: 1000px) {
-  .image_variable{
-    width:164px; 
-    height:164px;
-    border-radius: 2px;
-  }
-  .image_set{
-    margin-left: -6px;
+  .kioku_show{
+    margin-top: 80px;
+    margin-bottom: 35px;
+    .btn{
+      margin-top: 0px!important;
+      margin-left: -43px!important;
+      max-width: 350px;
+    }
+    .profile_image{
+      height: 100px!important;
+      width: 100px!important;
+    }
+    .image_variable{
+      width:145px!important; 
+      height:145px!important;
+      border-radius: 2px;
+    }
+    .image_set{
+      margin-left: -9px;
+      margin-bottom: -5px;
+    }
+    .posts{
+      margin-left: -60px;
+    }
+    .follower{
+      margin-left: -62px;
+    }
+    .follow{
+      margin-left: -40px;
+    }
+    .image_variable{
+      width:164px; 
+      height:164px;
+      border-radius: 2px;
+    }
+    .image_set{
+      margin-left: -6px;
+    }
   }
 }
 .image_variable{
@@ -377,7 +422,10 @@ a{
 .card-profile{
   margin-top: -35px;
 }
-
+.kioku_post_show{
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
 /*********************************
 メディアクエリ
 *********************************/

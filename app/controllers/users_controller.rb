@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def edit
+  def edit 
     @user = User.find(params[:id])
     if @user != current_user
       redirect_to users_path , alert: '不正なアクセスです。'
@@ -17,8 +17,11 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update(user_params)
+    if @user.update(user_params)
     redirect_to user_path(@user)
+    else
+      render :edit
+    end
   end
 
     private

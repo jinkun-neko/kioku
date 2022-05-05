@@ -306,6 +306,48 @@ footer ul li {
     font-family: none;
   }
 }
+
+.kioku_edit{
+  #error_explanation {
+    color: rgb(241, 54, 54);
+    padding: 28px;
+    font-size: 16px;
+    position: relative;
+    top: 0px;
+    text-align: center;
+    list-style: none;
+    text-decoration: rgb(255, 193, 193) wavy underline;
+    background-color: rgb(235, 234, 234);
+    border-radius:  10px;
+    h2{
+      color: rgb(241, 54, 54);
+    }
+    ul{
+      list-style: none;
+    }
+    li{
+      margin-top: 22px;
+    margin-left: -35px;
+    }
+  }
+  .alert-danger{
+    color: rgb(241, 54, 54);
+    background-color: initial;
+    border-color: initial;
+    border: initial;
+    text-decoration: rgb(255, 193, 193) wavy underline;
+    position: relative;
+    top: 0x;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  .alert{
+    margin-top: 3px;
+    margin-bottom: 2px;
+    border: initial;
+  }
+}
+}
 //user_show image
 @media screen and (max-width: 700px) {
   .kioku_show{
@@ -698,10 +740,6 @@ a{
   }
   .col-4 {
     width: 27.333333%;
-}
-.profile_image {
-  margin-left: 80px;
-  margin-bottom: -30px;
 }
 }
 

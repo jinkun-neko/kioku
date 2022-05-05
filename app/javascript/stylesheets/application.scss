@@ -18,6 +18,7 @@ section {
   overflow: auto;
 }
 textarea {
+  color: pink;
   resize: vertical;
 }
 .center {
@@ -517,7 +518,7 @@ footer ul li {
       }
     }
     .follower{
-      margin-left: -10px;
+      margin-left: -5px;
       .nunber{
         margin-left: 16px;
       }
@@ -591,7 +592,7 @@ footer ul li {
       }
     }
     .follower{
-      margin-left: -40px;
+      margin-left: -30px;
       .nunber{
         margin-left: 16px;
       }
@@ -681,7 +682,7 @@ image_size
   }
 }
 .fa-ellipsis-h {
-  margin-left: 388px;
+  margin-left: 382px;
   position: absolute;
   top: -42px;
 }
@@ -794,6 +795,15 @@ a{
     right: 20px;
     filter: drop-shadow(2px 2px 2px rgb(138, 138, 138));
   }
+}
+/*********************************
+  favorite
+*********************************/
+.text-start{
+  margin-bottom: 6px;
+  position: relative;
+  top: 24px;
+  left: 8px;
 }
 /*********************************
 メディアクエリ

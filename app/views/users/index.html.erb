@@ -11,8 +11,8 @@
                     <%= attachment_image_tag user, :profile_image, fallback: "no-image.png" , style: "width: 250px;height: 250px;object-fit: cover; border-radius: 10px 10px 0 0;"  %>
                   <% end %>
                   <div class="card-body">
-                    <h5 class="card-title text-center"> <%= link_to user_path(user) do %><%= user.username %><% end %></h5>
-                    <h6 class="card-title text-center">投稿数: 1</h6>
+                    <h5 class="card-title text-center"><%= link_to user_path(user) do %><%= user.username %><% end %></h5>
+                    <h6 class="card-title text-center"><%= @user.posts.count %></h6>
                   </div>
                 </div>
               </div>

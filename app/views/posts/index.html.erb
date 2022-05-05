@@ -10,7 +10,7 @@
               </div>
 
               <div class="card-body">
-                <div class="card-title" style="margin-top: -15px;">
+                <div class="card-title" style="margin-top: -10px;">
                   <%= link_to user_path(post.user) do %>
                     <%= attachment_image_tag post.user, :profile_image, fallback: "no-image.png", class: "profile_image" ,style:"width:40px; height:40px; object-fit:cover; border-radius:120px;" %>
                   <% end %>
@@ -32,6 +32,12 @@
               <div class="card-text">
                 <h6 class="card-text fw-lighter lh-sm mb-3" style="height: 100px; padding-top: 15px;padding-left: 10px;"><%= post.body %></h6>
               </div> 
+
+              <div id = "favorite_buttons_<%= post.id %>"  class="text-start">
+                <h6>
+                  <%= render "favorites/favorite", post: post %>
+                </h6>
+              </div><!-- text-start !-->
 
                 <div class="text-end" style="margin-bottom: -12px;">
                   <h6><%= post.created_at.strftime("%Y年%m月%d日 %H時%M分") %></h6>

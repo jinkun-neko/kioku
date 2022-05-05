@@ -6,6 +6,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @posts = @user.posts
+    @favorite_count = 0
+    @posts.each do |post|
+      @favorite_count += post.favorites.count
+    end
   end
 
   def edit 

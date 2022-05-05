@@ -1,0 +1,9 @@
+<% if current_user.already_favorited?(post) %>
+    <%= link_to post_favorite_path(post), method: :delete , remote: true do %>
+      <i class="fas fa-heart" style="color: pink; font-size:1.7em; "></i>
+    <% end %>
+  <% else %>
+  <%= link_to post_favorite_path(post), method: :post , remote: true do %>
+    <i class="far fa-heart" style="color: pink; font-size:1.7em;"></i>
+  <% end %>
+<% end %>

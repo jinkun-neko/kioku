@@ -22,8 +22,8 @@
                   <div class="dropdown dropstart">
                     <i class="fas fa-ellipsis-h" style="cursor:-moz-grabbing;cursor:-webkit-grabbing;cursor: pointer;"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><%= link_to "編集", edit_post_path(post.id), style: 'color: black;font-size:15px;text-decoration: none;' %></li>
-                      <li><%= link_to "削除", post, method: :delete, data: { confirm: "投稿を削除しますか？" } , style: 'color: black;font-size:15px;text-decoration: none;' %></li>
+                      <li><i class="fas fa-user-edit"></i>  <%= link_to "編集", edit_post_path(post.id), style: 'color: black;font-size:15px;text-decoration: none;' %></li>
+                      <li><i class="far fa-trash-alt"></i>  <%= link_to "削除", post, method: :delete, data: { confirm: "投稿を削除しますか？" } , style: 'color: black;font-size:15px;text-decoration: none;' %></li>
                     </ul>
                   </div>
                 <% end %>
@@ -40,7 +40,9 @@
             </div>
           </div>
       <% end %>
-
+      <%= link_to new_post_path do %>
+        <%= image_tag 'plus.png' , class:"plus" , size: '60x60' %>
+      <% end %>
       </div>
     </div><!-- kioku-posts-index !-->
   </div><!-- row !-->

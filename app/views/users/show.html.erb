@@ -5,7 +5,7 @@
         <div class="col-2 offset-1 offset-md-1 offset-lg-3">
           <div class="mt-2">
               <%= link_to edit_user_path(@user) do %>
-              <%= attachment_image_tag @user, :profile_image, style: "profile_image_icon", fallback: "no-image.png" , style: "width: 150px;height: 150px;object-fit: cover; border-radius: 120px;" %>
+              <%= attachment_image_tag @user, :profile_image, style: "profile_image_icon", fallback: "no-image2.png" , style: "width: 150px;height: 150px;object-fit: cover; border-radius: 120px;" %>
             <% end %>
           </div>     
         </div>     
@@ -36,15 +36,15 @@
           </div>
         </div>
 
-        <div class="container">
+        <div class="container text-box">
           <div class="row">
-              <div class="col-12 offset-2 offset-md-2 offset-lg-3 offset-xl-3">
+              <div class="col-12 offset-2 offset-md-2 offset-lg-3 offset-xl-4">
                 <div class="mt-3">
                   <h5><%= @user.username %></h5>
                 </div>
               </div>
-              <div class="col-12 offset-2 offset-md-2 offset-lg-3 offset-xl-3">
-                <div class="mt-1">
+              <div class="col-12 offset-2 offset-md-2 offset-lg-3 offset-xl-4">
+                <div class="mt-1 mb-3">
                   <% if  @user.profile.present? %>
                     <h6 class="pb-2 pl-4 pr-4 w-75 rounded" style="max-width:600px;"><%= simple_format @user.profile  %></h6>
                   <% else %>
@@ -57,10 +57,10 @@
             </div>
           </div>
 
-      <div class="container">
-        <div class="row d-flex align-items-center">
+      <div class="container image">
+        <div class="row justify-content-center">
             <% @user.posts.each do |post| %>
-              <div class="col-4 col-md-3 col-lg-3 col-xl-2">
+              <div class="col-4 col-md-3 col-lg-4 col-xl-4">
                 <% if @user.id == current_user.id %> 
                   <% if  @user.profile_image.present? %>
                     <div class="mt-1">

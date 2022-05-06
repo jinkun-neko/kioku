@@ -1,14 +1,14 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
+    @users = User.all.order(id: "DESC")
   end
 
   def show
-    @user = User.find(params[:id])
-    @posts = @user.posts
-    @favorite_count = 0
-    @posts.each do |post|
+      @user = User.find(params[:id])
+      @posts = @user.posts
+      @favorite_count = 0
+      @posts.each do |post|
       @favorite_count += post.favorites.count
     end
   end

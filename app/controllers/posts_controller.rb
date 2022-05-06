@@ -2,9 +2,9 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   
   def index
-    @posts = Post.all.order(id: "DESC")
+    @posts  = Post.where("created_at",Time.now.tomorrow)
+    # @posts = Post.all.order(id: "DESC")
   end
-  
   
   def show
     @post = Post.find(params[:id])
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
-      redirect_to post_path(@post) , notice: '投稿しました。’'
+      redirect_to post_path(@post) , notice: "投稿しました。"
     else
       render :new
     end
@@ -45,7 +45,6 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to user_path(@post.user), notice: "投稿を削除しました。"
   end
-
 
   private
   def post_params

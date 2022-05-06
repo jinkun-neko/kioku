@@ -28,9 +28,9 @@
               <h6 class="card-text fw-lighter lh-sm mb-3" style="height: 100px; padding-top: 15px;padding-left: 10px;"><%= @post.body %></h6>
             </div> 
 
-              <div id = "favorite_buttons_<%= post.id %>"  class="text-start">
+              <div id = "favorite_buttons_<%= @post.id %>"  class="text-start">
                 <h6>
-                  <%= render "favorites/favorite", post: post %>
+                  <%= render "favorites/favorite", post: @post %>
                 </h6>
               </div><!-- text-start !-->
 

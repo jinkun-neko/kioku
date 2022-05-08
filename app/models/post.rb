@@ -7,4 +7,8 @@ class Post < ApplicationRecord
     validates :body
     validates :image
   end
+
+  def day_delete?
+    created_at + 1.days > Date.today
+  end
 end

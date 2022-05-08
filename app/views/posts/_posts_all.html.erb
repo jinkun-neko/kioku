@@ -35,12 +35,15 @@
               </div><!-- text-start !-->
 
               <div class="text-end" style="margin-bottom: -12px;">
-                  <h6><%= post.created_at.strftime("%Y年%m月%d日 %H時%M分") %></h6>
+                <h6><% day = (Time.zone.now - post.created_at).floor / 3600 %></h6>
+
+                <h6>あと<%= (day - 24).to_s %>時間</h6>
+                <h6><%= post.created_at.strftime("%Y年%m月%d日 %H時%M分") %></h6>
               </div><!-- text-end !-->
 
         </div><!-- col-12 offset-md-2 offset-xl-3 !-->
       </div><!-- card mt-4 style= width: 450px; !-->
-    </div><!-- おそらくコンテナ？ !-->
+    </div><!-- おそらくコンテナ !-->
 
   <%= link_to new_post_path do %>
     <%= image_tag 'plus.png' , class:"plus" , size: '60x60' %>

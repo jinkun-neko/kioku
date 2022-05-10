@@ -12,7 +12,6 @@
               <%= link_to post.user.username, user_path(post.user) ,style:"text-decoration:none; color: black; margin-left: 5px;"  , class: "fst-italic text-decoration-underline" %>
             </div><!-- card-body 2 !-->
 
-            <p class="card-text">
               <% if post.user_id == current_user.id %>
                 <div class="dropdown dropstart">
                   <i class="fas fa-ellipsis-h" style="cursor:-moz-grabbing;cursor:-webkit-grabbing;cursor: pointer;"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
@@ -22,10 +21,9 @@
                   </ul>
                 </div><!-- dropdown dropstart !-->
               <% end %>
-            </p>
 
             <div class="card-text">
-              <h6 class="card-text fw-lighter lh-sm mb-3" style="height: 100px; padding-top: 15px;padding-left: 10px;"><%= post.body %></h6>
+              <h6 class="card-text fw-lighter lh-sm" style="height: 100px; padding-top: 15px;padding-left: 10px;"><%= post.body %></h6>
             </div><!-- card_text !-->
 
               <div id = "favorite_buttons_<%= post.id %>"  class="text-start">
@@ -36,9 +34,7 @@
 
               <div class="text-end" style="margin-bottom: -12px;">
                 <h6><% day = (Time.zone.now - post.created_at).floor / 3600 %></h6>
-
-                <h6>あと<%= (day - 24).to_s %>時間</h6>
-                <h6><%= post.created_at.strftime("%Y年%m月%d日 %H時%M分") %></h6>
+                <h6>あと<%= (day - 24) / -1 %>時間</h6>
               </div><!-- text-end !-->
 
         </div><!-- col-12 offset-md-2 offset-xl-3 !-->

@@ -9,6 +9,6 @@ class Post < ApplicationRecord
   end
 
   def day_delete?
-    created_at + 1.days > Date.today
+    created_at + 21.hour > Date.today
   end
 end

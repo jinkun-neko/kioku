@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :favorites, dependent: :destroy
+  has_many :relationships, foreign_key: :following_id
 
   with_options presence: true  do
     validates :username

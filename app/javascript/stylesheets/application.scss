@@ -395,7 +395,7 @@ footer ul li {
     margin-bottom: -15px;
   }
   .container .image{
-    margin-left: 40px;
+    margin-left: 90px;
   }
   .container .text-box{
     margin-right: 100px;
@@ -416,6 +416,7 @@ footer ul li {
     }
   }
 }
+
 @media screen and (max-width: 1400px) {
   .kioku_show{
     margin-top: 85px;
@@ -498,6 +499,7 @@ footer ul li {
     margin-top: 80px;
     margin-bottom: 35px;
     margin-left: -55px;
+    
     .profile_image{
       margin-left: 30px;
       margin-bottom: -22px;
@@ -531,10 +533,13 @@ footer ul li {
     }
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .kioku_show{
     margin-top: 80px;
     margin-left: -55px;
+    .container .image{
+      margin-left: 50px;
+    }
     .profile_image{
       margin-left: 30px;
       margin-bottom: -22px;
@@ -572,6 +577,9 @@ footer ul li {
   .kioku_show{
     margin-top: 80px;
     margin-left: -55px;
+    .container .image{
+      margin-left: 53px;
+    }
     .profile_image{
       margin-left: 32px;
       margin-bottom: -25px
@@ -582,8 +590,8 @@ footer ul li {
       max-width: 250px;
     }
     .image_set{
-      margin-left: -18px;
-    margin-bottom: -5px;
+      margin-left: 10px;
+      margin-bottom: -5px;
     }
     .posts{
       margin-left: -13px;
@@ -610,17 +618,20 @@ footer ul li {
     }
   }
 }
-@media (min-width: 1400px){
+
+@media (min-width: 1300px){
 .kioku_show{
   .col-xl-4 {
-  margin-left: -120px!important;
+  width: 24%;
 }
 }}
 @media (min-width: 1200px){
-.kioku_show .col-xl-4 {
-    margin-left: -65px;
+.kioku_show{
+  .col-xl-4 {
+    width: 23%;
+    margin-left: 72px;
 }
-}
+}}
 /*********************************
 image_size
 *********************************/
@@ -696,7 +707,6 @@ a{
 .card-profile{
   margin-top: -35px;
 }
-
 .kioku_post_show{
   margin-top: 62px;
   margin-bottom: -5px;
@@ -740,10 +750,9 @@ a{
     }
   }
   .col-4 {
-    width: 27.333333%;
+    width: 29%;
 }
 }
-
 //user_design
 .user_edit{
   margin-top: 60px;

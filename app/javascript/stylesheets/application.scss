@@ -765,8 +765,23 @@ a{
 /*********************************
   plus画像設定
 *********************************/
-.plus{
-  display: none;
+.plus {
+  display: block;
+  width: 60px;
+  cursor: pointer;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 42px;
+  right: 20px;
+  transition: 0.1s;  
+  filter: drop-shadow(0 0 0);
+}
+.plus:active {
+  opacity: 1.5;
+  position: fixed;
+  bottom: 44px;
+  right: 20px;
+  filter: drop-shadow(2px 2px 2px rgb(138, 138, 138));
 }
 @media screen and (max-width: 700px) {
   .plus {

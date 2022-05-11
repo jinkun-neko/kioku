@@ -16,4 +16,10 @@ class User < ApplicationRecord
   def already_favorited?(post)
     self.favorites.exists?(post_id: post.id)
   end
+
+  def self.guest
+    user = User.find_or_create_by!(email: 'guest@example.com', username:"ゲスト") do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
 end

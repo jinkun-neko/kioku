@@ -51,5 +51,6 @@ gem "refile-mini_magick"
 gem 'bootstrap-sass', '3.4.1' #bootstrap-sassは、LESSをSassへ変換し、必要なBootstrapファイルを現在のアプリケーションですべて利用できるようにします。
 gem 'bootstrap' , '~> 5.1.3'#cssのフレームワーク
 gem 'jquery-rails' #bootstrap の動きに関わるgem
+gem 'active_storage_validations', '0.8.2'
 gem 'font-awesome-rails'
 gem 'font-awesome-sass'

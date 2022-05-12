@@ -22,7 +22,6 @@
                 <h6>総いいね</h6>
               </div>
             </div>
-
         </div>
           <div class="col-12 offset-6 offset-md-5 offset-lg-5 offset-xl-5">
             <div class="mt-n5">
@@ -31,7 +30,7 @@
           </div>
         </div>
 
-        <div class="container text-box">
+        <div class="container text-box mb-5">
           <div class="row">
               <div class="col-12 offset-2 offset-md-2 offset-lg-3 offset-xl-4">
                 <div class="mt-3">
@@ -39,7 +38,7 @@
                 </div>
               </div>
               <div class="col-12 offset-2 offset-md-2 offset-lg-3 offset-xl-4">
-                <div class="mt-1 mb-3">
+                <div class="mt-1 mb-1">
                   <% if  @user.profile.present? %>
                     <h6 class="pb-2 pl-4 pr-4 w-75 rounded" style="max-width:600px;"><%= simple_format @user.profile  %></h6>
                   <% else %>
@@ -57,8 +56,8 @@
             <div class="container image">
               <div class="row justify-content-start">
                   <% @user.posts.each do |post| %>
-                      <% if @user.id == current_user.id %> 
-                        <% if  @user.profile_image.present? %>
+                    <% if @user.id == current_user.id %> 
+
                           <div class="col-4 col-md-3 col-lg-4 col-xl-4">
                             <div class="mt-1">
                               <div class="image_set">
@@ -68,11 +67,7 @@
                             </div><!-- image_set !-->
                           </div><!-- mt-1 !-->
                         </div><!-- col-4 col-md-3 col-lg-3 col-xl-1!-->
-                      <% else %>
-                        <div class="col-12">
-                          <h6 class="offset-2 offset-lg-2 offset-xl-1 p-5 mt-3 list-group-item-info w-75 shadow rounded text-center">投稿はまだです。</h6>
-                        </div> 
-                    <% end %>
+
                   <% end %><!-- user.posts.each !-->
                 <% end %>
                 </div><!-- row justify-content-start" !-->
@@ -82,6 +77,11 @@
         </div><!-- container !-->
 
           <% if @user.id == current_user.id %> 
+              <% if  @user.profile_image.present? %>
+                <div class="col-12">
+                  <h6 class="offset-2 offset-lg-2 offset-xl-1 p-5 mt-3 list-group-item-info w-75 shadow rounded text-center">投稿はまだです。</h6>
+              <% end %>
+                </div> 
             <% else %>
               <div class="col-12" style= "width:100%!important;">
                 <h6 class="offset-2 offset-lg-2 offset-xl-1 p-5 mt-3 bg-danger bg-gradient text-white  w-75 shadow rounded text-center">他人の投稿は見れません。</h6> 

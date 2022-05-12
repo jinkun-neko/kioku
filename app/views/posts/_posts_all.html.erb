@@ -33,8 +33,7 @@
               </div><!-- text-start !-->
 
               <div class="text-end" style="margin-bottom: -12px;">
-                <h6><% day = (Time.zone.now - post.created_at).floor / 3600 %></h6>
-                <h6>あと<%= (day - 24) / -1 %>時間</h6>
+                <h6><%= time_ago_in_words(post.created_at)%>前に投稿</h6>
               </div><!-- text-end !-->
 
         </div><!-- col-12 offset-md-2 offset-xl-3 !-->

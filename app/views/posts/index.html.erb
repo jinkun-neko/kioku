@@ -3,12 +3,15 @@
     <div class="kioku-posts-index">
       <% @posts.each do |post| %> 
         <% if post.day_delete? %> 
-          <%= render partial: 'posts_all', locals: { post: post} %>  
+          <%if post.hide == false %>
+            <%= render partial: 'posts_all', locals: { post: post} %>  
+          <% end %> 
         <% end %> 
-      <% end %> 
+      <% end %>
     </div><!-- kioku-posts-index !-->
   </div><!-- row !-->
 </div><!-- container !-->
-  <%= link_to new_post_path do %>
-    <%= image_tag 'plus.png' , class:"plus" , size: '60x60' %>
-  <% end %>
+
+<%= link_to new_post_path do %>
+  <%= image_tag 'plus.png' , class:"plus" , size: '60x60' %>
+<% end %>

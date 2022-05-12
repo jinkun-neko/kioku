@@ -1,6 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="kioku-posts-index">
+      <div class="dropdown_posts">
+        <ul class="dropdown-menu mx-0 shadow" style="width: 220px;">
+          <li><a class="dropdown-item d-flex gap-2 align-items-center" href="#"><svg class="bi" width="16" height="16"><use xlink:href="#files"/></svg>新規投稿</a></li>
+          <li><a class="dropdown-item d-flex gap-2 align-items-center" href="#"><svg class="bi" width="16" height="16"><use xlink:href="#image-fill"/></svg>ユーザー</a></li>
+          <li><a class="dropdown-item d-flex gap-2 align-items-center" href="#"><svg class="bi" width="16" height="16"><use xlink:href="#image-fill"/></svg>プロフィール</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="#"><svg class="bi" width="16" height="16"><use xlink:href="#trash"/></svg>ゴミ箱</a></li>
+      </ul>
+    </div><!-- dropdown !-->
       <% @posts.each do |post| %> 
         <% if post.day_delete? %> 
           <%if post.hide == false %>

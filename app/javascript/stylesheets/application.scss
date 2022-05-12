@@ -682,7 +682,6 @@ image_size
   #error_explanation {
     position: relative;
     top: 0px;
-    max-width: 600px;
   }
 }
 /********************************* 
@@ -698,10 +697,6 @@ image_size
   margin-left: 382px;
   position: absolute;
   top: -42px;
-}
-.dropdown-menu.show {
-  margin-top: -25px;
-  margin-right: 9px;
 }
 a{
   text-decoration: none;
@@ -863,4 +858,58 @@ a{
   .user-card{
     margin-left: 110px;
   }
+}
+/*********************************
+    divider
+*********************************/
+.dropdown_posts{
+  position: fixed;
+  left: 780px;
+/* 仕切り部分 */
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+/* アイコン */
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+/* ドロップダウンの表示 */
+.dropdown-menu {
+  position: static;
+  display: block;
+  width: auto;
+  margin: 4rem auto;
+}
+/* 通常のドロップダウン用 */
+.dropdown-menu-macos {
+  display: grid;
+  gap: .25rem;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+.dropdown-menu-macos .dropdown-item {
+  border-radius: .25rem;
+}
+/* フィルタ付きダークドロップダウン用 */
+.form-control-dark {
+  background-color: rgba(255, 255, 255, .05);
+  border-color: rgba(255, 255, 255, .15);
+}
+/* アイコン付きドロップダウン用 */
+.dropdown-item-danger {
+  color: var(--bs-red);
+}
+.dropdown-item-danger:hover,
+.dropdown-item-danger:focus {
+  color: #fff;
+  background-color: var(--bs-red);
+}
+.dropdown-item-danger.active {
+  background-color: var(--bs-red);
+}
 }

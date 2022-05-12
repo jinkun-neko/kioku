@@ -1,18 +1,11 @@
 class Post < ApplicationRecord
   belongs_to :user
-  attachment :image
   has_many :favorites, dependent: :destroy
-
-  with_options presence: true  do
-    validates :body
-  end
-
-  validates :image,  presence: true,  
-    content_type: { in: %w[image/jpeg image/gif image/png],
-    message: "must be a valid image format" },
-    size:   { less_than: 5.megabytes,
-    message: "should be less than 5MB" }
-
+  attachment :image, type: :image
+  
+  validates :image ,presence: true 
+  validates :body, presence: true ,length: { in: 1..200 ,
+    message: "最大%{count}文字です。"}   
   validates :hide, inclusion: [true, false]
 
   def day_delete?

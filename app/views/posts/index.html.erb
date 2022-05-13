@@ -2,12 +2,13 @@
   <div class="row">
     <div class="kioku-posts-index">
       <div class="dropdown_posts">
-        <ul class="dropdown-menu mx-0 shadow" style="width: 220px;">
-          <li><a class="dropdown-item d-flex gap-2 align-items-center" href="#"><svg class="bi" width="16" height="16"><use xlink:href="#files"/></svg>新規投稿</a></li>
-          <li><a class="dropdown-item d-flex gap-2 align-items-center" href="#"><svg class="bi" width="16" height="16"><use xlink:href="#image-fill"/></svg>ユーザー</a></li>
-          <li><a class="dropdown-item d-flex gap-2 align-items-center" href="#"><svg class="bi" width="16" height="16"><use xlink:href="#image-fill"/></svg>プロフィール</a></li>
+        <ul class="dropdown-menu mx-0 shadow   d-none d-lg-block" style="width: 220px;">
+          <li><%= link_to new_post_path , class:"dropdown-item d-flex gap-2 align-items-center" do %>新規投稿<% end %></li>
+          <li><%= link_to users_path,class:"dropdown-item d-flex gap-2 align-items-center" do %>ユーザー一覧<% end %></li>
+          <li><%= link_to user_path(current_user) ,class:"dropdown-item d-flex gap-2 align-items-center" do %>プロフィール<% end %></li>
+          </li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="#"><svg class="bi" width="16" height="16"><use xlink:href="#trash"/></svg>ゴミ箱</a></li>
+          <li><%= link_to edit_user_path(current_user) ,class: "dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" do %>ユーザー設定<% end %></li>
       </ul>
     </div><!-- dropdown !-->
       <% @posts.each do |post| %> 

@@ -3,12 +3,11 @@
     <div class="kioku-posts-index">
       <div class="dropdown_posts">
         <ul class="dropdown-menu mx-0 shadow   d-none d-lg-block" style="width: 220px;">
-          <li><%= link_to new_post_path , class:"dropdown-item d-flex gap-2 align-items-center" do %>新規投稿<% end %></li>
-          <li><%= link_to users_path,class:"dropdown-item d-flex gap-2 align-items-center" do %>ユーザー一覧<% end %></li>
-          <li><%= link_to user_path(current_user) ,class:"dropdown-item d-flex gap-2 align-items-center" do %>プロフィール<% end %></li>
-          </li>
+          <li><%= link_to new_post_path , class:"dropdown-item d-flex gap-2 align-items-center" do %><i class="fas fa-plus-square"></i> 新規投稿<% end %></li>
           <li><hr class="dropdown-divider"></li>
-          <li><%= link_to edit_user_path(current_user) ,class: "dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" do %>ユーザー設定<% end %></li>
+          <li><%= link_to user_path(current_user) ,class:"dropdown-item d-flex gap-2 align-items-center" do %><i class="fas fa-user"></i> プロフィール<% end %></li>
+          <li><%= link_to users_path,class:"dropdown-item d-flex gap-2 align-items-center" do %><i class="fas fa-users"></i> ユーザー一覧<% end %></li>
+          <li><%= link_to edit_user_path(current_user) ,class: "dropdown-item d-flex gap-2 align-items-center" do %><i class="fas fa-user-edit"></i> ユーザー編集<% end %></li>
       </ul>
     </div><!-- dropdown !-->
       <% @posts.each do |post| %> 

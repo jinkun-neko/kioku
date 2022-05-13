@@ -22,17 +22,18 @@
 
                         <div class="mb-4">
                             <div class="field">
-                                <%= f.label :profile , class: 'form-label' %>
-                                <%= f.text_area  :profile , class: 'form-control' , style: "height:120px; resize:none;" %>
+                                <%= f.label :profile_image , class: 'form-label' %>
+                                <%= f.attachment_field :profile_image , class: 'form-control' %>
                             </div>
                         </div>
 
                         <div class="mb-4">
                             <div class="field">
-                                <%= f.label :profile_image , class: 'form-label' %>
-                                <%= f.attachment_field :profile_image , class: 'form-control' %>
+                                <%= f.label :profile , class: 'form-label' %>
+                                <%= f.text_area  :profile , class: 'form-control' , style: "height:120px; resize:none;" %>
                             </div>
                         </div>
+
                         
                         <%= f.submit "作成", class: "btn btn-outline-primary w-100" %>
                     </div>

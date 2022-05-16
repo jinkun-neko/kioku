@@ -1,17 +1,14 @@
-<% provide(:title, "パスワード変更") %>
+<% provide(:title, "パスワード確認") %>
   <div class="container">  
     <div class="row">
-      <h1>パスワードをお忘れの場合</h1>
+      <div class="password_new">
+      <h1>パスワードの確認</h1>
 
       <div class="col-md-6 offset-md-3">
         <div class="mt-4">
           <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-          <%= render "users/shared/error_messages", resource: resource %>
+          <%= render "/shared/error_messages_users", resource: resource %>
         </div>
-
-          <div class="my-3 mb-5">
-            <h2>登録したメールアドレスを入力して、送信ボタンを押してください。<br> 登録メールにパスワードを送信します。</h2>
-          </div>
 
             <div class="mb-4">
               <%= f.label :email, class:'form-label' %>
@@ -19,13 +16,13 @@
             </div>
 
               <div class="actions">
-                <div class="mb-5">
-                    <%= f.submit "保存", class:"user-update-btn btn btn-outline-success w-100" %>
+                <div class="mb-4">
+                  <%= f.submit "保存", class: "btn btn-outline-primary w-100" %>
                 </div>
               </div>
           <% end %>
 
-      <%= render "users/shared/links" %>
+      <%= render "devise/shared/links" %>
     </div>
   </div>
 <div>

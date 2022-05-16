@@ -39,13 +39,13 @@
                   <%= f.password_field :password_confirmation, autocomplete: "off" , class: 'form-control'  %>
                 </div>
 
-                  <div class="mb-5 mt-4">
+                  <div class="mb-3 mt-4">
                     <div class="actions">
                     <%= f.submit "登録" , class: "btn btn-outline-primary w-100" %>
                   </div>
                 </div>
+              <%= render "devise/shared/links" %>
               </form>
-
             <% end %>
               </div>
             </div>

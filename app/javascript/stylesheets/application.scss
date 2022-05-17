@@ -230,7 +230,7 @@ footer ul li {
   text-decoration: rgb(70, 255, 73)  wavy underline;
   text-align: center;
   position: relative;
-  top: 25px;
+  top: 30px;
   padding: 0px;
   padding-bottom: 13px;
   .notice{
@@ -247,7 +247,7 @@ footer ul li {
     text-align: center;
     text-decoration: rgb(255, 193, 193) wavy underline;
     position: relative;
-    top: 17px;
+    top: 30px;
     padding-top: 0px;
     padding-bottom: 0px;
     margin-bottom: -20px;
@@ -307,11 +307,12 @@ footer ul li {
   }
 }
 
-.kioku_edit{
+.kioku_sessions{
   #error_explanation {
     color: rgb(241, 54, 54);
-    padding: 28px;
+    padding: 16px;
     font-size: 16px;
+    margin-bottom: 10px;
     position: relative;
     top: 0px;
     text-align: center;
@@ -321,13 +322,57 @@ footer ul li {
     border-radius:  10px;
     h2{
       color: rgb(241, 54, 54);
+      margin-bottom: 15px;
     }
     ul{
       list-style: none;
     }
     li{
-      margin-top: 22px;
-    margin-left: -35px;
+      margin-top: 0px;
+      margin-left: -30px;
+    }
+  }
+  .alert-danger{
+    color: rgb(241, 54, 54);
+    background-color: initial;
+    border-color: initial;
+    border: initial;
+    text-decoration: rgb(255, 193, 193) wavy underline;
+    position: relative;
+    top: 0x;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  .alert{
+    margin-top: 3px;
+    margin-bottom: 2px;
+    border: initial;
+  }
+}
+}
+.kioku_edit{
+  #error_explanation {
+    color: rgb(241, 54, 54);
+    padding: 16px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 0px;
+    text-align: center;
+    list-style: none;
+    text-decoration: rgb(255, 193, 193) wavy underline;
+    background-color: rgb(235, 234, 234);
+    border-radius:  10px;
+    h2{
+      color: rgb(241, 54, 54);
+      margin-bottom: 15px;
+    }
+    ul{
+      list-style: none;
+    }
+    li{
+      margin-top: 0px;
+      margin-left: -30px;
     }
   }
   .alert-danger{
@@ -688,8 +733,45 @@ image_size
   margin-top: 170px;
   margin-bottom: 100px;
   #error_explanation {
+    color: rgb(241, 54, 54);
+    padding: 16px;
+    font-size: 16px;
+    margin-bottom: 10px;
     position: relative;
     top: 0px;
+    text-align: center;
+    list-style: none;
+    text-decoration: rgb(255, 193, 193) wavy underline;
+    background-color: rgb(235, 234, 234);
+    border-radius:  10px;
+    h2{
+      color: rgb(241, 54, 54);
+      margin-bottom: 15px;
+    }
+    ul{
+      list-style: none;
+    }
+    li{
+      margin-top: 0px;
+      margin-left: -40px;
+    }
+  }
+  .alert-danger{
+    color: rgb(241, 54, 54);
+    background-color: initial;
+    border-color: initial;
+    border: initial;
+    text-decoration: rgb(255, 193, 193) wavy underline;
+    position: relative;
+    top: 0x;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  .alert{
+    margin-top: 3px;
+    margin-bottom: 2px;
+    border: initial;
+    }
   }
 }
 /********************************* 

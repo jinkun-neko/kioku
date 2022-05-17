@@ -24,7 +24,7 @@
                      <ul class="dropdown-menu dropdown-menu-right ml-auto" aria-labelledby="navbarDropdownMenuLink">
                         <li><%= link_to 'プロフィール', user_path(current_user.id), class:"dropdown-item" %></li>
                         <li><%= link_to 'プロフィール変更', edit_user_registration_path,class:"dropdown-item" %></li>
-                        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"dropdown-item" %></li>
+                        <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class:"dropdown-item" %></li>
                         </ul>
                      </li>
                   </ul>

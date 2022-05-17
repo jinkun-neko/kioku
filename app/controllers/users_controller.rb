@@ -20,6 +20,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    reset_session
+    redirect_to root_path, notice: 'ログアウトしました。'
+  end
+  
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
@@ -29,7 +34,7 @@ class UsersController < ApplicationController
     end
   end
 
-    private
+  private
 
   def user_params
     params.require(:user).permit(:username, :email, :profile, :profile_image)

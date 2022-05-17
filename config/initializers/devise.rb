@@ -24,11 +24,9 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = ENV["GOOGLE_EMAIL"]
   config.mailer = 'Users::Mailer' 
   # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
-
+  config.mailer_sender = ENV["GOOGLE_MAIL_ADDRESS"]
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
 
@@ -54,7 +52,7 @@ Devise.setup do |config|
   # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.
   # The same considerations mentioned for authentication_keys also apply to request_keys.
   # config.request_keys = []
-
+  config.reset_password_keys = [:email]
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
@@ -212,7 +210,7 @@ Devise.setup do |config|
 
   # Time interval to unlock the account if :time is enabled as unlock_strategy.
   # config.unlock_in = 1.hour
-
+  config.sign_in_after_reset_password = true
   # Warn on the last attempt before the account is locked.
   # config.last_attempt_warning = true
 

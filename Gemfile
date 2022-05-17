@@ -42,6 +42,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'dotenv-rails'
 gem 'rails-i18n' #英語を日本語に翻訳するgem
 gem 'devise'  #ログイン機能を実装する。
 gem 'devise-i18n' #deviseを日本語翻訳する。

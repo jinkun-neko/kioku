@@ -24,19 +24,19 @@ Rails.application.configure do
   config.active_support.disallowed_deprecation = :raise
   config.active_support.disallowed_deprecation_warnings = []
   
-  mail = ENV["GOOGLE_EMAIL"]
-  pass = ENV["GOOGLE_PASSWORD"]
+
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => 'smtp.gmail.com',
-    :port => 587,
-    :domain   =>     'gmail.com',
-    :user_name => Rails.application.secrets.mail,
-    :password => Rails.application.secrets.pass,
-    :authentication => :plain,
-    :enable_starttls_auto => true
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: 'gmail.com',
+    user_name: "jin12jin25700@gmail.com",
+    password: "ijkmnlcgqohnreok",
+    authenticatio: :plain,
+    enable_starttls_auto: true,
+    authentication: :login
   }
   
   config.active_support.deprecation = :log

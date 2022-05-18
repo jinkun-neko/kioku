@@ -4,6 +4,7 @@ Rails.application.configure do
   config.cache_classes = false
   config.eager_load = false
   config.consider_all_requests_local = true
+  config.hosts.clear
 
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
@@ -32,8 +33,8 @@ Rails.application.configure do
     address: "smtp.gmail.com",
     port: 587,
     domain: 'gmail.com',
-    user_name: "jin12jin25700@gmail.com",
-    password: "ijkmnlcgqohnreok",
+    user_name: ENV["GOOGLE_EMAIL"],
+    password: ENV["GOOGLE_PASSWORD"],
     authenticatio: :plain,
     enable_starttls_auto: true,
     authentication: :login

@@ -18,14 +18,14 @@ class User < ApplicationRecord
     end
 
     def self.guest
-      user = User.find_or_create_by!(email: 'guest2@example.com', username:"ゲスト",profile:"私はguestアカウントです" ) do |user|
-      user.password = SecureRandom.urlsafe_base64
-      user.confirmed_at = Time.now.utc
+      user = User.find_or_create_by!(email: 'guest3@example.com',username:"guest",profile:"私はguestログインの、ユーザーです。") do |user|
+        user.password = SecureRandom.urlsafe_base64
+        user.confirmed_at = Time.now  
+      end
     end
 
-    def is_confirmation_period_expired?
-      # メールアドレス確認メール有効期限チェック(期限はconfig/initializers/devise.rbのconfirm_withinで設定)
-      self.confirmation_period_expired?
-    end
+  def is_confirmation_period_expired?
+    # メールアドレス確認メール有効期限チェック(期限はconfig/initializers/devise.rbのconfirm_withinで設定)
+    self.confirmation_period_expired?
   end
 end

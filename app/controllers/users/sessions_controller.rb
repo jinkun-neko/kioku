@@ -5,10 +5,7 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   def guest_sign_in
-    user = User.find_or_create_by!(email: 'guest2@example.com',username:"guest",profile:"私はguestログインの、ユーザーです。") do |user|
-      user.password = SecureRandom.urlsafe_base64
-      user.confirmed_at = Time.now  
-    end
+    user = User.guest
     sign_in user
     redirect_to posts_path, notice: 'ゲストユーザーとしてログインしました。'
   end

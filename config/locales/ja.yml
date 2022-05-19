@@ -38,3 +38,9 @@ ja:
       x_years:
         one: 1年
         other: "%{count}年"
+  enums: 
+    contact: 
+      subject: 
+        About_the_app: "このアプリについて" 
+        About_work: "仕事について"
+        others: "その他" 

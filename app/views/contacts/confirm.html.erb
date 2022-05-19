@@ -1,16 +1,27 @@
-<div class="contacts_new" style="margin-top: 240px;">
+<div class="contacts_new" style="margin-top: 190px;">
   <div class="container">
-    <div class="row justify-content-center">
       <div class="col-md-6 offset-md-3">
         <table>
           <tbody>
             <tr>
-              <td class="text-center mb-2 mt-2" style="width: 30%;" ><h2  style="color:#1f3466;">お名前</h2></td>
+              <td class="text-center" style="width: 30%;" ><h2  style="color:#1f3466;">お名前</h2></td>
               <td class="mb-5 mt-2"><h5 style="margin-bottom: 30px;"><%= @contact.name %></h5></td>
             </tr>
             <tr>
+              <td class="text-center"><h2 style="color:#1f3466;">メールアドレス</h2></td>
+              <td class="" style="white-space: pre-wrap;"><h5 style="margin-bottom: 30px; margin-left:15px;"><%= @contact.email %></h5></td>
+            </tr>
+            <tr>
+              <td class="text-center"><h2 style="color:#1f3466;">電話番号</h2></td>
+              <td class="" style="white-space: pre-wrap;"><h5 style="margin-bottom: 30px;margin-left:15px;"><%= @contact.phone_number%></h5></td>
+            </tr>
+            <tr>
+              <td class="text-center mb-5 mt-4"><h2 style="color:#1f3466;">お問い合わせ</h2></td>
+              <td class="" style="white-space: pre-wrap;"><h5 style="margin-bottom: 30px;margin-left: 15px;"><%= @contact.subject_i18n %></h5></td>
+            </tr>
+            <tr>
               <td class="text-center mb-5 mt-4"><h2 style="color:#1f3466;">メッセージ</h2></td>
-              <td class="mb-5 mt-5" style="white-space: pre-wrap;"><h5><%= @contact.message %></h5></td>
+              <td class="" style="white-space: pre-wrap;"><h5 style="margin-bottom: 30px; margin-left: 15px;"><%= @contact.message %></h5></td>
             </tr>
           </tbody>
         </table>
@@ -21,7 +32,7 @@
           <%= f.hidden_field :phone_number %>
           <%= f.hidden_field :subject %>
           <%= f.hidden_field :message %>
-            <div class="mb-4 mt-5">
+            <div class="mb-4 mt-3">
             <div><%= f.submit '送信'  , class: "btn btn-outline-primary w-100" %></div>
           </div>  
         <% end %>
@@ -36,7 +47,6 @@
           </div>  
         <% end %>
 
-      </div>
     </div>
   </div>
 </div>

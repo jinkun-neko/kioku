@@ -1,21 +1,43 @@
-<div class="contacts_new" style="margin-top: 160px;">
+<div class="contacts_new" style="margin-top: 110px;">
   <div class="container">
     <div class="row justify-content-center">
       <h1>お問い合わせ</h1>
 
     <%= form_for(@contact, url: confirm_path) do |f| %>
       <div class="col-md-6 offset-md-3">
-        <div class="mb-4 mt-2">
+
+        <div class="mb-2 mt-2">
           <div class="form-group">
             <%= f.label :name, 'お名前*' , class: 'form-label' %>
             <%= f.text_field :name, autofocus: true, class: 'form-control' %>
           </div>
         </div>
 
+        <div class="mb-2 mt-2">
+          <div class="form-group">
+              <%= f.label :email, 'メールアドレス*', class:'form-label' %><br/>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="mb-2 mt-2">
+          <div class="form-group">
+              <%= f.label :phone_number, '電話番号' , class:'form-label' %><br/>
+            <%= f.telephone_field  :phone_number, autocomplete: "number", class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="mb-2 mt-2">
+          <div class="form-group">
+            <%= f.label :subject, 'お問い合わせ件名*' , class:'form-label' %><br/>
+            <%= f.select :subject, Contact.subjects.keys.map {|k| [I18n.t("enums.contact.subject.#{k}"), k]} ,{ include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+          </div>
+        </div>
+
         <div class="form-group">
           <div class="mb-4 mt-2">
             <%= f.label :message, 'メッセージ*' , class: 'form-label' %>
-            <%= f.text_area :message, class: 'form-control' ,style: "height:150px;resize:none;" %>
+            <%= f.text_area :message, class: 'form-control' ,style: "height:125px;resize:none;" %>
           </div>
         </div>
 

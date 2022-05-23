@@ -27,9 +27,10 @@
 <img width="400" align="center" alt="スクリーンショット 2022-05-23 11 11 36" src="https://user-images.githubusercontent.com/82744798/169764533-472b5c03-49de-427b-9165-6006fe6a98ef.png">  
 </div>
 
-# Note
- 
-注意点などがあれば書く
+# ER図
+<div align="center">
+ <img src="https://user-images.githubusercontent.com/82744798/169788507-77cd2a07-ba01-4367-bf64-f4c4fa590abd.jpg" width="800">
+</div>
  
 # Author
 ### 仕事の依頼、いろいろご連絡ください。 

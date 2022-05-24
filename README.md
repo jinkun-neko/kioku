@@ -1,46 +1,24 @@
-<<<<<<< HEAD
-このREADMEは通常、取得するために必要な手順を文書化します。
-アプリケーションが稼働しています。
-
-あなたがカバーしたいと思うかもしれないこと：
-
-*Ruby version
-2.7.2
-
-*システムの依存関係
-
-* 構成
-
-*データベースの作成
-
-*データベースの初期化
-
-*テストスイートの実行方法
-
-*サービス
-*導入手順
-=======
 <div align="center">
 <img src="https://user-images.githubusercontent.com/82744798/169765852-29c4a55b-00d6-40fd-a903-ed6a2fef6caa.png" width="500">
 </div>
+
+## 🌐 App URL
+### **https://kioku-1225.herokuapp.com**  
   
 # KIOKUとは、
 人間の記憶は24時間で60%忘れると言われています。そんな記憶みたいに、投稿が消えてなくなるアプリです。
 他人の目に極力少なくすることで、SNSでの投稿のハードルを下げ、自分だけの投稿一覧に貯めることができます。
+他人のためじゃなく、自分のためのSNSになっています。 
 
-## 🌐 App URL
-### **https://kioku-1225.herokuapp.com**    
-
-# 開発環境
-- macOS 10.14 Mojave
-- Rails 6.0.3
-- ruby 2.7.2
-- bootstrap 5.9
-- deivse 
-
-# アプリ機能
+# 機能一覧
+- ユーザー登録(devise → ログイン機能をすぐに構築できるため)
+- 投稿機能
+  - 写真投稿機能(refile → 画像投稿を軽量ででき使いやすいため)
+  - タイムライン非表示機能
+- いいね機能(Ajax)
+## アプリ機能
 * 24時間で消える投稿。
-* 投稿一覧は自分だけしかみれません。
+* 本人のみ閲覧可能の個人投稿一覧。 → 他人に自分の投稿一覧を見られることがないので、個人的な投稿もすることができます。
 * 投稿を見せずに、自分の投稿一覧だけにのせることができます。
 * いいね機能だけで、コメントをなくすことでSNSの争いをなくすことができます。
 
@@ -53,7 +31,31 @@
 <div align="center">
  <img src="https://user-images.githubusercontent.com/82744798/169788507-77cd2a07-ba01-4367-bf64-f4c4fa590abd.jpg" width="800">
 </div>
- 
+
+# 使用技術
+### 開発環境
+- macOS 10.14 Mojave
+- Rails 6.0.3
+- ruby 2.7.2
+- visual studio code
+### フロントエンド　
+- html/css 
+- javascript 
+- bootstrap 5.9 → デザインをすぐに実装でき、綺麗に作れるため。
+- jquery → 動きを簡単に付けれるため。
+### サーバーサイド	
+- Ruby2.7.2
+- rails6
+- rspec → railsの一般的なテストgem
+### データベース 
+- mysql5 
+### その他
+- Docker/Docker-compose → 技術向上のため。
+
+# 大変だった点
+* 実装したい機能を言語化し実際に、プログラムに落とし込む作業。
+* dockerやawsなどの新しい、技術の使用。
+
 # Author
 ### 仕事の依頼、いろいろご連絡ください。 
 * jinkun
@@ -62,5 +64,3 @@
 # License
 #### Copyright (c) 2022 jikun
 #### This web app is released under the MIT License, see LICENSE.
-
->>>>>>> 6efa495d4b997fb26ead523dbaa5bd10a5e7c7ec

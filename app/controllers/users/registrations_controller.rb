@@ -22,24 +22,25 @@ class Users::RegistrationsController < Devise::RegistrationsController
     def configure_account_update_params
       devise_parameter_sanitizer.permit(:account_update, keys: [:username])
     end
-  
+
     def configure_sign_up_params
       devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email])
     end
-  
+
     def ensure_normal_user
       if resource.email == 'guest2@example.com'
         redirect_to posts_path, alert: 'ゲストユーザーの更新・削除はできません。'
       end
     end
-  
+
     #サインアップ後の遷移先を指定する方法
       def after_sign_up_path_for(resource)
         posts_path 
       end
-    end
 
-  private
+      private
+
     def user_params
       params.require(:user).permit(:name, :email, :username, :password, :password_confirmation)
     end
+  end

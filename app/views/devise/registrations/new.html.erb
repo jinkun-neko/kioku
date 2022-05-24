@@ -5,6 +5,8 @@
         <div class="kioku_sessions">
           <h1>新規登録</h1>
 
+            <%= image_tag 'petting.png', style:"width:450px;position:absolute;top:80px;right:1050px;;", class:"d-none d-md-block" %> 
+            <%= image_tag 'ballet.png', style:"width:450px;position:absolute;position: absolute;top: 350px;right: -100px;", class:"d-none d-md-block" %> 
               <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
                 <form>
                   <%= render "devise/shared/error_messages", resource:resource %>
@@ -28,7 +30,7 @@
                   <%= f.label :password , class:'form-label' %>
                   <p> 
                   <% if @validatable %>
-                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+                  <em>(<%= @minimum_password_length %> 最小文字数)</em>
                   <% end %>
                     <%= f.password_field :password, autocomplete: "off" , class: 'form-control'  %>
                   </p>

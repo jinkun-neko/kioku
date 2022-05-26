@@ -22,11 +22,14 @@
 * 本人のみ閲覧可能の個人投稿一覧。 → 他人に自分の投稿一覧を見られることがないので、個人的な投稿もすることができます。
 * 投稿を見せずに、自分の投稿一覧だけにのせることができます。
 * いいね機能だけで、コメントをなくすことでSNSの争いをなくすことができます。
-* あえて機能を少なくすることで、
+* あえて機能を少なくすることで、ごちゃごちゃせず分かりやすい機能になっています。
 
+# アプリ画面
 <div align="center">
-<img width="800" alt="投稿画面" align="center" src="https://user-images.githubusercontent.com/82744798/169764497-4b206de4-7620-4973-bd26-4884cbe53a78.png">
-<img width="400" align="center" alt="スクリーンショット 2022-05-23 11 11 36" src="https://user-images.githubusercontent.com/82744798/169764533-472b5c03-49de-427b-9165-6006fe6a98ef.png">  
+<img width="350" alt="スクリーンショット 2022-05-26 9 37 37" src="https://user-images.githubusercontent.com/82744798/170391714-7a2dd74e-0825-40d8-b0fc-3f00b7ed1ab8.png">
+<img width="350" alt="スクリーンショット 2022-05-26 9 49 31" src="https://user-images.githubusercontent.com/82744798/170392714-9c796a49-31cb-4c57-abe1-69ff73a1efe3.png">
+<img width="1435" alt="スクリーンショット 2022-05-26 9 46 43" src="https://user-images.githubusercontent.com/82744798/170392471-5dffbd50-7e14-4459-8238-3e339f65f5da.png">
+<img width="1439" alt="スクリーンショット 2022-05-26 9 51 14" src="https://user-images.githubusercontent.com/82744798/170393001-908d9c8d-dd32-45e2-a3d8-72dbbd28b78b.png">
 </div>
 
 # 使用技術
@@ -58,11 +61,6 @@
 * 実装したい機能を言語化し実際に、プログラムに落とし込む作業。
 * dockerやawsなどの新しい、技術の使用。
 * 細かいデザインや、非同期通信など。
-
-# 今後実装する機能
-* ユーザー検索
-* スマホ用のデザイン修正
-* 無限スクロール
 
 # Author
 ### 仕事の依頼、いろいろご連絡ください。 

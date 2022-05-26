@@ -16,12 +16,8 @@
   - 写真投稿機能(refile → 画像投稿を軽量ででき使いやすいため)
   - タイムライン非表示機能
 - いいね機能(Ajax)
-<<<<<<< HEAD
 - コンタクト機能でメールを受け取れるようにした。
 ### アプリ機能
-=======
-## アプリ機能
->>>>>>> 71605dc871de8d4735b58e9c09b9fc386d9ab795
 * 24時間で消える投稿。
 * 本人のみ閲覧可能の個人投稿一覧。 → 他人に自分の投稿一覧を見られることがないので、個人的な投稿もすることができます。
 * 投稿を見せずに、自分の投稿一覧だけにのせることができます。
@@ -58,36 +54,15 @@
  <img src="https://user-images.githubusercontent.com/82744798/169788507-77cd2a07-ba01-4367-bf64-f4c4fa590abd.jpg" width="800">
 </div>
 
-<<<<<<< HEAD
 # 大変だった点
 * 実装したい機能を言語化し実際に、プログラムに落とし込む作業。
 * dockerやawsなどの新しい、技術の使用。
 * 細かいデザインや、非同期通信など。
-=======
-# 使用技術
-### 開発環境
-- macOS 10.14 Mojave
-- Rails 6.0.3
-- ruby 2.7.2
-- visual studio code
-### フロントエンド　
-- html/css 
-- javascript 
-- bootstrap 5.9 → デザインをすぐに実装でき、綺麗に作れるため。
-- jquery → 動きを簡単に付けれるため。
-### サーバーサイド	
-- Ruby2.7.2
-- rails6
-- rspec → railsの一般的なテストgem
-### データベース 
-- mysql5 
-### その他
-- Docker/Docker-compose → 技術向上のため。
 
-# 大変だった点
-* 実装したい機能を言語化し実際に、プログラムに落とし込む作業。
-* dockerやawsなどの新しい、技術の使用。
->>>>>>> 71605dc871de8d4735b58e9c09b9fc386d9ab795
+# 今後実装する機能
+* ユーザー検索
+* スマホ用のデザイン修正
+* 無限スクロール
 
 # Author
 ### 仕事の依頼、いろいろご連絡ください。 
@@ -96,8 +71,4 @@
  
 # License
 #### Copyright (c) 2022 jikun
-<<<<<<< HEAD
 #### This web app is released under the MIT License, see LICENSE.
-=======
-#### This web app is released under the MIT License, see LICENSE.
->>>>>>> 71605dc871de8d4735b58e9c09b9fc386d9ab795

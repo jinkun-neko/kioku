@@ -4,6 +4,7 @@ RSpec.describe "Users", type: :request do
   before do
     before(:each) do
     @user = create(:user)
+    @user2 = create(:user)
   end
 
     describe "GET /index" do
@@ -17,6 +18,10 @@ RSpec.describe "Users", type: :request do
       it "returns http success" do
         get user_path(id: @user.id)
         expect(response).to have_http_status(:success)
+      end
+      it "本人ではない場合,HOMEにダイレクト" do
+        get user_path(id: @user2.id)
+        expect(response).to redirect_to root_path
       end
     end
 

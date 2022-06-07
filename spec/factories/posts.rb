@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :post do
-    user_id { 1 }
-    body { "jinkunは、とても立派です。" }
-    image_id { "MyString" }
+    association :user
+    image_id { Faker::Lorem.characters(number: 10) }
+    body  { Faker::Lorem.characters(number: 10) }
   end
 end

@@ -1,11 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "Posts", type: :request do
-
   before do
     before(:each) do
     @user = create(:user)
-    @post = create(:post, user_id: user.id)
   end
 
     describe "GET /index" do
@@ -40,4 +38,4 @@ RSpec.describe "Posts", type: :request do
       end
     end
   end
-end
+  end

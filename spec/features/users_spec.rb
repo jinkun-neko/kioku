@@ -1,9 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :feature do
-  before do
-    @user = build(:user)
-  end
+RSpec.feature'Users', type: :feature do
+  let(:user) { build(:user) }
+
   describe 'User CRUD' do
     describe 'ログイン前' do
       describe 'ユーザー新規登録' do
@@ -16,6 +15,8 @@ RSpec.describe 'Users', type: :feature do
               fill_in '確認用パスワード', with: 'password'
               click_button '登録'
               expect(current_path).to eq new_user_registration_path
+                # expect(page).to have_content 'メールアドレスはすでに存在します。'
+
           end
         end
         context 'メールアドレス未記入' do
@@ -25,12 +26,12 @@ RSpec.describe 'Users', type: :feature do
           it 'ユーザーの新規作成が失敗する' do
             visit new_user_registration_path
             fill_in 'ユーザー名', with: 'test_name'
-            fill_in 'メールアドレス', with: @user.email
+            fill_in 'メールアドレス', with: user.email
             fill_in 'パスワード', with: 'password'
             fill_in '確認用パスワード', with: 'password'
             click_button '登録'
             expect(current_path).to eq new_user_registration_path
-            expect(page).to have_content "メールアドレスはすでに存在します"
+            expect(page).to have_text 'メールアドレスはすでに存在します。'
           end
         end
       end

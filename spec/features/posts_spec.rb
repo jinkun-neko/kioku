@@ -1,45 +1,32 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :system do
-  let(:post) { create(:post) }
+RSpec.feature 'Posts', type: :feature do
+  let(:user) { build(:user) }
+  scenario 'ユーザー情報が更新されていること' do
+    #ログイン前には投稿ボタンがない
+    visit posts_path(id: user.id)
+    # 投稿ボタンがないことを確認
+    expect(page).to have_no_content('投稿する')
 
-  describe 'Post CRUD' do
-    describe '投稿前' do
-      describe 'ユーザー新規登録' do
-        context '投稿フォームの入力値が正常' do
-          it 'ユーザーの新規作成が成功' do
-            it 'ユーザーの新規作成が成功' do
-              visit new_user_registration_path
-              fill_in 'ユーザー名', with: 'test_name'
-              fill_in 'メールアドレス', with: 'test@example.com'
-              fill_in 'パスワード', with: 'password'
-              fill_in '確認用パスワード', with: 'password'
-              click_button '登録'
-              expect(current_path).to eq new_user_registration_path
-          end
-          end
-        end
-        context 'コメント未記入' do
+    # ログイン処理
+    # ログインフォームのあるページに移動する
+    visit new_user_session_path
+    # emailを入力する
+    fill_in 'user_email', with: user.email
+    # パスワードを入力する
+    fill_in 'user_password', with: user.password
+    # ログインボタンをおす
+    find('input[name="commit"]').click
+    expect(current_path).to eq root_path
+    expect(page).to have_content('投稿する')
 
-        end
-        context '写真なし' do
-
-        end
-        context 'タイムライン非表示' do
-
-        end
-      end
-    end
-    describe '投稿後' do
-      describe '投稿編集'
-        context '投稿の入力値が正常' do
-        end
-        context 'コメント未記入' do
-      end
-        context 'タイムライン表示されているか' do
-        end
-        context '24時間で消されているか' do
-      end
-    end
+    # ツイートの投稿
+    expect {
+      click_link('投稿する')
+      expect(current_path).to eq new_tweet_path
+      fill_in 'image', with: ''
+      fill_in 'text', with: 'フューチャースペックのテスト'
+      find('input[type="submit"]').click
+    }.to change(Post, :count).by(1)
   end
 end

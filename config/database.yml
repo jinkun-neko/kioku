@@ -1,10 +1,38 @@
+# default: &default
+#   adapter: mysql2
+#   encoding: utf8mb4
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   username: test
+#   password: <%= ENV["MYSQLPASSWORD"] %
+#   host: db
+
+# development:
+#   <<: *default
+#   database: kioku_development
+
+# test:
+#   <<: *default
+#   database: kioku_test
+
+# production:
+#   <<: *default
+#   adapter: mysql2
+#   encoding: utf8mb4
+#   database: kioku_production
+#   charset: utf8mb4
+#   collation: utf8mb4_general_ci
+#   username: <%= Rails.application.credentials.db[:user_name] %>
+#   password: <%= Rails.application.credentials.db[:password] %>
+#   host: <%= Rails.application.credentials.db[:endpoint] %>
+
 default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: test
-  password: <%= ENV["MYSQLPASSWORD"] %
-  host: db
+  socket: /var/lib/mysql/mysql.sock
+  username: <%= Rails.application.credentials.db[:user_name] %>
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:endpoint] %>
 
 development:
   <<: *default
@@ -19,8 +47,6 @@ production:
   adapter: mysql2
   encoding: utf8mb4
   database: kioku_production
-  charset: utf8mb4
-  collation: utf8mb4_general_ci
   username: <%= Rails.application.credentials.db[:user_name] %>
   password: <%= Rails.application.credentials.db[:password] %>
   host: <%= Rails.application.credentials.db[:endpoint] %>

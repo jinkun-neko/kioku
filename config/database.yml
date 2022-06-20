@@ -15,7 +15,6 @@ test:
   database: kioku_test
 
 production:
-  <<: *default
   database: kioku_production
   adapter: mysql2
   encoding: utf8mb4

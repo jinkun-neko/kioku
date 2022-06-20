@@ -47,3 +47,4 @@ production:
   adapter: mysql2
   encoding: utf8mb4
   database: kioku_production
+  host: <%= Rails.application.credentials.db[:endpoint] %>

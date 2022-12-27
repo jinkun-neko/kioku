@@ -20,7 +20,7 @@ production:
   database: kioku_production
   adapter: mysql2
   encoding: utf8
-  username: <%= Rails.application.credentials.db[:user_name] %>
-  password: <%= ENV['PASSWORD2'] %>
-  host: <%= Rails.application.credentials.db[:endpoint] %>
+  # username: <%= Rails.application.credentials.db[:user_name] %>
+  # password: <%= ENV['PASSWORD2'] %>
+  # host: <%= Rails.application.credentials.db[:endpoint] %>
   socket: /var/lib/mysql/mysql.sock

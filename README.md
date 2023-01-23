@@ -43,7 +43,7 @@
 - javascript 
 - bootstrap 5.9 → デザインをすぐに実装でき、綺麗に作れるため。
 - jquery → 動きを簡単に付けれるため。
-### サーバーサイド	
+### バックエンド	
 - Ruby2.7.2
 - rails6
 - rspec → railsの一般的なテストgem
